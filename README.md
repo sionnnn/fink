@@ -1,7 +1,7 @@
-#fink dev boilerplate
+#fink
 
 ###usage
 
-npm install
+>npm install
 
-grunt
+>grunt
