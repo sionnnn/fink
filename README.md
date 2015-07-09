@@ -11,6 +11,46 @@ npm install
 grunt
 ```
 
+###taskrunner
+>grunt
+
+```js
+"devDependencies": {
+    "grunt": "~0.4.1",
+    "load-grunt-config": "^0.17.1",
+    "grunt-contrib-copy": "^0.8.0",
+        
+    "grunt-contrib-watch": "~0.3.1",
+    "grunt-contrib-connect": "~0.2.0",
+
+    "grunt-jsdoc":"~0.6.7",
+
+    "grunt-browserify": "^3.8.0",
+    "grunt-babel": "^5.0.1",
+    "grunt-typescript": "~0.6.2",
+    "babelify": "^6.1.0",
+    "tsify": "^0.11.2",
+
+    "grunt-jscs":"~1.8.0",
+    "grunt-eslint":"~16.0.0",
+
+    "grunt-sass": "~1.0.0",
+    "grunt-styleguide": "~0.2.17"
+}
+```
+
+####tbd
+* autoprefixer
+* uglify
+* imagemin
+* legacssy
+* newer
+* webfont
+* combine-media-queries
+* grunticon
+* w3c-validation
+* asset-cachebuster
+
 ##js
 
 ###compiler
@@ -35,6 +75,9 @@ grunt [JSCS](http://jscs.info/) and [ESLint](http://eslint.org/)
 ide plugins available for sublime/visual studio
 
 ###docs
+```
+./docs/jsdoc
+```
 
 [JSDoc](http://usejsdoc.org/)
 
@@ -47,13 +90,17 @@ ide plugins available for sublime/visual studio
 ##CSS
 >styleguides [guardian](https://github.com/guardian/frontend/wiki/CSS-guidelines) / [airbnb](https://github.com/airbnb/css)
 
-* SCSS 
-
+* SCSS SASS
 * BEM notation
-
 * [normalize.css](http://necolas.github.io/normalize.css/)
-
 * [animate.css](https://daneden.github.io/animate.css/)
+
+###docs
+```
+./docs/styleguide
+```
+
+[KSS](https://www.npmjs.com/package/grunt-kss) using [grunt-styleguide](https://github.com/indieisaconcept/grunt-styleguide)
 
 ####tbd
 >
@@ -61,6 +108,7 @@ ide plugins available for sublime/visual studio
 * grids
 * modules
 * mobile
+* lint validation
 
 ##HTML
 
@@ -72,6 +120,9 @@ ide plugins available for sublime/visual studio
 
 ####tbd
 >
+* templates stencil
+* icons
+* fonts
 * shims
 * shivs
 * fallbacks

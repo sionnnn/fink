@@ -38,5 +38,5 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-jscs');
 	grunt.registerTask('jscheck', ['jscs', 'eslint']);
     //default
-    grunt.registerTask('default', ['jscheck', 'es6', 'jsdoc', 'server']);
+    grunt.registerTask('default', ['copy', 'jscheck', 'es6', 'jsdoc', 'sass', 'styleguide', 'server']);
 };
