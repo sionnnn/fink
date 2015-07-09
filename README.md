@@ -14,6 +14,8 @@ grunt
 ###taskrunner
 >grunt
 
+####included dependencies
+
 ```js
 "devDependencies": {
     "grunt": "~0.4.1",
@@ -79,7 +81,7 @@ ide plugins available for sublime/visual studio
 ./docs/jsdoc
 ```
 
-[JSDoc](http://usejsdoc.org/)
+guide [JSDoc](http://usejsdoc.org/)
 
 ####tbd
 >
@@ -100,7 +102,7 @@ ide plugins available for sublime/visual studio
 ./docs/styleguide
 ```
 
-[KSS](https://www.npmjs.com/package/grunt-kss) using [grunt-styleguide](https://github.com/indieisaconcept/grunt-styleguide)
+guide [KSS](https://www.npmjs.com/package/grunt-kss) using [grunt-styleguide](https://github.com/indieisaconcept/grunt-styleguide)
 
 ####tbd
 >
