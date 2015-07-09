@@ -1,6 +1,4 @@
 docs/jsdoc
-public/**/*.js
-public/**/*.css
 node_modules
 
 # Windows image file caches
