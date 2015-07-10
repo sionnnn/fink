@@ -102,7 +102,7 @@ guide [JSDoc](http://usejsdoc.org/)
 ./docs/styleguide
 ```
 
-guide [KSS](https://www.npmjs.com/package/grunt-kss) using [grunt-styleguide](https://github.com/indieisaconcept/grunt-styleguide)
+guide [KSS](https://www.npmjs.com/package/grunt-kss)
 
 ####tbd
 >
