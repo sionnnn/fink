@@ -139,7 +139,7 @@ guide [KSS](https://www.npmjs.com/package/grunt-kss)
 >
 * frameworks [materialize.css](http://materializecss.com/) / [inuit.css](https://github.com/inuitcss) / [furtive](http://furtive.co/)
 * grids - separate grid system?
-* mobile [sculpt](https://www.heartinternet.uk/sculpt?__ja=tsid:60927|cgn:6157437) / [framework7](http://www.idangero.us/framework7/#.VaO53_lVhuB) [ionic](http://ionicframework.com/) / [clank](http://getclank.com/)
+* mobile [sculpt](https://www.heartinternet.uk/sculpt?__ja=tsid:60927|cgn:6157437) / [framework7](http://www.idangero.us/framework7/#.VaO53_lVhuB) / [ionic](http://ionicframework.com/) / [clank](http://getclank.com/)
 * lint validation CSS lint/pretty etc [SASS-beautify](https://github.com/badsyntax/SassBeautify) / [SASS-lint](https://github.com/brigade/scss-lint)
 * CSS regression testing - [BackstopJS](https://github.com/garris/BackstopJS) / [PhantomCSS](https://github.com/Huddle/PhantomCSS) - [info](https://www.phase2technology.com/css-testing-with-phantomcss-phantomjs-casperjs-and-grunt/)
 
