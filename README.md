@@ -110,8 +110,8 @@ guide [KSS](https://www.npmjs.com/package/grunt-kss)
 * frameworks (materialize.css / inuit.css / http://furtive.co/)
 * grids
 * mobile [sculpt](https://www.heartinternet.uk/sculpt?__ja=tsid:60927|cgn:6157437) [framework7](http://www.idangero.us/framework7/#.VaO53_lVhuB) [ionic](http://ionicframework.com/) [clank](http://getclank.com/)
-* lint validation CSS lint/pretty etc (SASS-beautify SASS-lint), needs evaluation
-* CSS regression testing - BackstopJS/PhantomCSS, needs evaluation
+* lint validation CSS lint/pretty etc (SASS-beautify SASS-lint)
+* CSS regression testing - BackstopJS/PhantomCSS
 
 ##HTML
 
@@ -126,9 +126,9 @@ guide [KSS](https://www.npmjs.com/package/grunt-kss)
 * templating ie stencil
 * icons
 * fonts
-* shims/shivs/fallbacks/boilerplates
+* shims/shivs/fallbacks/boilerplates [polyfills](https://github.com/Modernizr/Modernizr/wiki/HTML5-Cross-Browser-Polyfills)
 * markup guidelines
-* accessibility wai-aria
+* accessibility wai-aria [aria design patterns](http://www.creativebloq.com/html5/5-html5-and-aria-design-patterns-7133753) 
 
 ##trello
 
