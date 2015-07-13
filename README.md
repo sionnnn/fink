@@ -41,48 +41,48 @@ grunt
 }
 ```
 
-####tbd
+####TBD
 
 #####images
-* grunt-webp
+* [grunt-webp](https://github.com/somerandomdude/grunt-webp)
 
 #####responsive images
-* grunt-responsive-images
-* grunt-clowncar
+* [grunt-responsive-images](https://github.com/andismith/grunt-responsive-images)
+* [grunt-clowncar](https://www.npmjs.com/package/grunt-clowncar)
 
 #####image min
-* grunt-contrib-imagemin
-* grunt-svgmin
+* [grunt-contrib-imagemin](https://github.com/gruntjs/grunt-contrib-imagemin)
+* [grunt-svgmin](https://github.com/sindresorhus/grunt-svgmin)
 
 #####css
-* grunt-combine-media-queries
-* grunt-uncss
-* grunt-contrib-cssmin
-* grunt-autoprefixer
-* grunt-legacssy
+* [grunt-combine-media-queries](https://github.com/buildingblocks/grunt-combine-media-queries)
+* [grunt-uncss](https://github.com/addyosmani/grunt-uncss)
+* [grunt-contrib-cssmin](https://github.com/gruntjs/grunt-contrib-cssmin)
+* [grunt-autoprefixer](https://github.com/nDmitry/grunt-autoprefixer)
+* [grunt-legacssy](https://github.com/robinpokorny/grunt-legacssy)
 
 #####js
-* uglify
+* [grunt-contrib-uglify](https://github.com/gruntjs/grunt-contrib-uglify)
 
 #####sprites icons fonts
-* grunt-spritesmith
-* grunticon
-* grunt-webfont
+* [grunt-spritesmith](https://github.com/Ensighten/grunt-spritesmith)
+* [grunticon](https://github.com/filamentgroup/grunticon)
+* [grunt-webfont](https://github.com/sapegin/grunt-webfont)
 
 #####assets
-* grunt-asset-cachebuster
-* grunt-w3c-validation
+* [grunt-asset-cachebuster](https://www.npmjs.com/package/grunt-asset-cachebuster)
+* [grunt-w3c-validation](https://www.npmjs.com/package/grunt-w3c-validation)
 
 #####ops performance
-* grunt-contrib-compress
-* grunt-pagespeed
-* grunt-wpt
-* grunt-phantomas
-* grunt-vulcanize
-* grunt-inline-css
+* [grunt-contrib-compress](https://github.com/gruntjs/grunt-contrib-compress)
+* [grunt-pagespeed](https://www.npmjs.com/package/grunt-pagespeed)
+* [grunt-wpt](https://www.npmjs.com/package/grunt-wpt)
+* [grunt-phantomas](https://www.npmjs.com/package/grunt-phantomas)
+* [grunt-vulcanize](https://github.com/Polymer/grunt-vulcanize)
+* [grunt-inline-css](https://github.com/jgallen23/grunt-inline-css)
 
 #####tasks
-* grunt-newer
+* [grunt-newer](https://www.npmjs.com/package/grunt-newer)
 
 ##js
 
@@ -114,10 +114,10 @@ ide plugins available for sublime/visual studio
 
 guide [JSDoc](http://usejsdoc.org/)
 
-####tbd
+####TBD
 >
-* unit tests
-* analytics
+* [unit tests](http://stackoverflow.com/questions/300855/javascript-unit-test-tools-for-tdd)
+* analytics - [tag manager](http://www.google.co.uk/tagmanager/)
 * frameworks [ionic](http://ionicframework.com/) / [famous](http://famous.org/) / [angular](https://angularjs.org) / [angular 2](https://angular.io/)
 * mobile [hammer](http://hammerjs.github.io/)
 
@@ -139,10 +139,10 @@ guide [KSS](https://www.npmjs.com/package/grunt-kss)
 ####tbd
 >
 * frameworks [materialize.css](http://materializecss.com/) / [inuit.css](https://github.com/inuitcss) / [furtive](http://furtive.co/)
-* grids
-* mobile [sculpt](https://www.heartinternet.uk/sculpt?__ja=tsid:60927|cgn:6157437) [framework7](http://www.idangero.us/framework7/#.VaO53_lVhuB) [ionic](http://ionicframework.com/) [clank](http://getclank.com/)
-* lint validation CSS lint/pretty etc [SASS-beautify](https://github.com/badsyntax/SassBeautify) [SASS-lint](https://github.com/brigade/scss-lint)
-* CSS regression testing - [BackstopJS](https://github.com/garris/BackstopJS) [PhantomCSS](https://github.com/Huddle/PhantomCSS)
+* grids - separate grid system?
+* mobile [sculpt](https://www.heartinternet.uk/sculpt?__ja=tsid:60927|cgn:6157437) / [framework7](http://www.idangero.us/framework7/#.VaO53_lVhuB) [ionic](http://ionicframework.com/) / [clank](http://getclank.com/)
+* lint validation CSS lint/pretty etc [SASS-beautify](https://github.com/badsyntax/SassBeautify) / [SASS-lint](https://github.com/brigade/scss-lint)
+* CSS regression testing - [BackstopJS](https://github.com/garris/BackstopJS) / [PhantomCSS](https://github.com/Huddle/PhantomCSS) - [info](https://www.phase2technology.com/css-testing-with-phantomcss-phantomjs-casperjs-and-grunt/)
 
 ##HTML
 
@@ -157,8 +157,7 @@ guide [KSS](https://www.npmjs.com/package/grunt-kss)
 * templating ie stencil
 * icons / fonts (see grunt dependancies tbd)
 * shims/shivs/fallbacks/boilerplates [polyfills](https://github.com/Modernizr/Modernizr/wiki/HTML5-Cross-Browser-Polyfills)
-* markup guidelines
-* accessibility wai-aria [aria design patterns](http://www.creativebloq.com/html5/5-html5-and-aria-design-patterns-7133753) 
+* markup guidelines - accessibility wai-aria [aria design patterns](http://www.creativebloq.com/html5/5-html5-and-aria-design-patterns-7133753) 
 
 ##trello
 
