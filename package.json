@@ -21,6 +21,7 @@
         "grunt-eslint":"~16.0.0",
 
         "grunt-sass": "~1.0.0",
-        "grunt-kss": "~2.0.0"
+        "grunt-kss": "~2.0.0",
+        "jquery":"^2.1.4"
     }
 }

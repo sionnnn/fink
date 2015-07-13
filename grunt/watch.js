@@ -6,6 +6,13 @@ module.exports = {
 	      spawn: false,
 	    },
 	},
+	ts:{
+		files: ['<%= paths.src.root %>/**/*.ts'],
+	    tasks: ['jscheck','es6'],
+	    options: {
+	      spawn: false,
+	    },
+	},
 	webworkers:{
 		files: ['<%= paths.src.root %>/js/webworkers/*'],
 	    tasks: ['copy'],

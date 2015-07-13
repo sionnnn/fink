@@ -15,7 +15,7 @@ module.exports = function(grunt) {
             scope: 'devDependencies'
         },
 		server:true,
-		es6: 'babel', //"typescript"
+		es6: 'babel', //"babel" or "typescript"
 		jscs:true
 	};
 

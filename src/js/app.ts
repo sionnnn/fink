@@ -2,6 +2,7 @@ import {ExampleClass} from './modules/example';
 
 let eg = new ExampleClass('typescript eg');
 console.log(eg.echo('echo'));
+console.dir(eg);
 
 let worker = new Worker('assets/js/webworkers/worker.js');
 worker.onmessage = function(e) {

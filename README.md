@@ -59,7 +59,7 @@ grunt
 
 >modular js using es6/esnext pattern [airbnb styleguide](https://github.com/airbnb/javascript)
 
-compile with either [babeljs](https://babeljs.io/) (greater ES6 support) or [typescript](http://www.typescriptlang.org/) (strongly typed, angular2.0) currently only compiles to commonJS
+compile with either [babeljs](https://babeljs.io/) (greater ES6 support) or [typescript](http://www.typescriptlang.org/) (strongly typed, angular2.0) currently only compiles to commonJS, [jQuery](https://jquery.com/) is imported via npm
 
 set in Gruntfile.js
 ```js
@@ -87,7 +87,7 @@ guide [JSDoc](http://usejsdoc.org/)
 >
 * unit tests
 * analytics
-* frameworks jQuery / ionic / famous / angular
+* frameworks ionic / famous / angular
 
 ##CSS
 >styleguides [guardian](https://github.com/guardian/frontend/wiki/CSS-guidelines) / [airbnb](https://github.com/airbnb/css)
