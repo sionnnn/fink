@@ -136,7 +136,7 @@ guide [JSDoc](http://usejsdoc.org/)
 
 guide [KSS](https://www.npmjs.com/package/grunt-kss)
 
-####tbd
+####TBD
 >
 * frameworks [materialize.css](http://materializecss.com/) / [inuit.css](https://github.com/inuitcss) / [furtive](http://furtive.co/)
 * grids - separate grid system?
@@ -152,7 +152,7 @@ guide [KSS](https://www.npmjs.com/package/grunt-kss)
 ./public/index.html
 ```
 
-####tbd
+####TBD
 >
 * templating ie stencil
 * icons / fonts (see grunt dependancies tbd)
