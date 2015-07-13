@@ -42,16 +42,47 @@ grunt
 ```
 
 ####tbd
-* autoprefixer
+
+#####images
+* grunt-webp
+
+#####responsive images
+* grunt-responsive-images
+* grunt-clowncar
+
+#####image min
+* grunt-contrib-imagemin
+* grunt-svgmin
+
+#####css
+* grunt-combine-media-queries
+* grunt-uncss
+* grunt-contrib-cssmin
+* grunt-autoprefixer
+* grunt-legacssy
+
+#####js
 * uglify
-* imagemin
-* legacssy
-* newer
-* webfont
-* combine-media-queries
+
+#####sprites icons fonts
+* grunt-spritesmith
 * grunticon
-* w3c-validation
-* asset-cachebuster
+* grunt-webfont
+
+#####assets
+* grunt-asset-cachebuster
+* grunt-w3c-validation
+
+#####ops performance
+* grunt-contrib-compress
+* grunt-pagespeed
+* grunt-wpt
+* grunt-phantomas
+* grunt-vulcanize
+* grunt-inline-css
+
+#####tasks
+* grunt-newer
 
 ##js
 
@@ -87,7 +118,7 @@ guide [JSDoc](http://usejsdoc.org/)
 >
 * unit tests
 * analytics
-* frameworks ionic / famous / angular
+* frameworks [ionic](http://ionicframework.com/) / [famous](http://famous.org/) / [angular](https://angularjs.org) / [angular 2](https://angular.io/)
 * mobile [hammer](http://hammerjs.github.io/)
 
 ##CSS
@@ -107,11 +138,11 @@ guide [KSS](https://www.npmjs.com/package/grunt-kss)
 
 ####tbd
 >
-* frameworks (materialize.css / inuit.css / http://furtive.co/)
+* frameworks [materialize.css](http://materializecss.com/) / [inuit.css](https://github.com/inuitcss) / [furtive](http://furtive.co/)
 * grids
 * mobile [sculpt](https://www.heartinternet.uk/sculpt?__ja=tsid:60927|cgn:6157437) [framework7](http://www.idangero.us/framework7/#.VaO53_lVhuB) [ionic](http://ionicframework.com/) [clank](http://getclank.com/)
-* lint validation CSS lint/pretty etc (SASS-beautify SASS-lint)
-* CSS regression testing - BackstopJS/PhantomCSS
+* lint validation CSS lint/pretty etc [SASS-beautify](https://github.com/badsyntax/SassBeautify) [SASS-lint](https://github.com/brigade/scss-lint)
+* CSS regression testing - [BackstopJS](https://github.com/garris/BackstopJS) [PhantomCSS](https://github.com/Huddle/PhantomCSS)
 
 ##HTML
 
@@ -124,8 +155,7 @@ guide [KSS](https://www.npmjs.com/package/grunt-kss)
 ####tbd
 >
 * templating ie stencil
-* icons
-* fonts
+* icons / fonts (see grunt dependancies tbd)
 * shims/shivs/fallbacks/boilerplates [polyfills](https://github.com/Modernizr/Modernizr/wiki/HTML5-Cross-Browser-Polyfills)
 * markup guidelines
 * accessibility wai-aria [aria design patterns](http://www.creativebloq.com/html5/5-html5-and-aria-design-patterns-7133753) 
