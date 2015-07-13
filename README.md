@@ -40,7 +40,7 @@ grunt
 }
 ```
 
-###TBD
+###TBD - grunt
 
 #####images
 * [grunt-webp](https://github.com/somerandomdude/grunt-webp)
@@ -113,7 +113,7 @@ ide plugins available for sublime/visual studio
 
 guide [JSDoc](http://usejsdoc.org/)
 
-####TBD
+####TBD - JS
 >
 * [unit tests](http://stackoverflow.com/questions/300855/javascript-unit-test-tools-for-tdd)
 * analytics - [tag manager](http://www.google.co.uk/tagmanager/)
@@ -135,7 +135,7 @@ guide [JSDoc](http://usejsdoc.org/)
 
 guide [KSS](https://www.npmjs.com/package/grunt-kss)
 
-####TBD
+####TBD - CSS
 >
 * frameworks [materialize.css](http://materializecss.com/) / [inuit.css](https://github.com/inuitcss) / [furtive](http://furtive.co/)
 * grids - separate grid system?
@@ -151,7 +151,7 @@ guide [KSS](https://www.npmjs.com/package/grunt-kss)
 ./public/index.html
 ```
 
-####TBD
+####TBD - HTML
 >
 * templating ie stencil
 * icons / fonts (see grunt dependancies tbd)
