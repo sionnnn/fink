@@ -11,10 +11,9 @@ npm install
 grunt
 ```
 
-###taskrunner
->grunt
+##grunt
 
-####included dependencies
+###included dependencies
 
 ```js
 "devDependencies": {
@@ -41,7 +40,7 @@ grunt
 }
 ```
 
-####TBD
+###TBD
 
 #####images
 * [grunt-webp](https://github.com/somerandomdude/grunt-webp)
