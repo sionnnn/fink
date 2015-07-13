@@ -88,6 +88,7 @@ guide [JSDoc](http://usejsdoc.org/)
 * unit tests
 * analytics
 * frameworks ionic / famous / angular
+* mobile [hammer](http://hammerjs.github.io/)
 
 ##CSS
 >styleguides [guardian](https://github.com/guardian/frontend/wiki/CSS-guidelines) / [airbnb](https://github.com/airbnb/css)
@@ -106,11 +107,11 @@ guide [KSS](https://www.npmjs.com/package/grunt-kss)
 
 ####tbd
 >
-* frameworks (materialize.css)
+* frameworks (materialize.css / inuit.css / http://furtive.co/)
 * grids
-* modules
-* mobile
-* lint validation
+* mobile [sculpt](https://www.heartinternet.uk/sculpt?__ja=tsid:60927|cgn:6157437) [framework7](http://www.idangero.us/framework7/#.VaO53_lVhuB) [ionic](http://ionicframework.com/) [clank](http://getclank.com/)
+* lint validation CSS lint/pretty etc (SASS-beautify SASS-lint), needs evaluation
+* CSS regression testing - BackstopJS/PhantomCSS, needs evaluation
 
 ##HTML
 
@@ -122,15 +123,12 @@ guide [KSS](https://www.npmjs.com/package/grunt-kss)
 
 ####tbd
 >
-* templates stencil
+* templating ie stencil
 * icons
 * fonts
-* shims
-* shivs
-* fallbacks
-* boilerplates
-* guidelines
-* markup
+* shims/shivs/fallbacks/boilerplates
+* markup guidelines
+* accessibility wai-aria
 
 ##trello
 
