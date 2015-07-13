@@ -1,3 +1,8 @@
+/// <reference path="./lib/jquery.d.ts" />
+import $ = require("jquery");
+//use require to import jquery
+console.log($);
+
 import {ExampleClass} from './modules/example';
 
 let eg = new ExampleClass('typescript eg');
