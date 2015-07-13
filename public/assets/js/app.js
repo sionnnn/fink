@@ -9211,7 +9211,7 @@ return jQuery;
 }));
 
 },{}],2:[function(require,module,exports){
-/// <reference path="./lib/jquery.d.ts" />
+/// <reference path="../../lib/jquery.d.ts" />
 var $ = require("jquery");
 //use require to import jquery
 console.log($);

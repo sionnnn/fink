@@ -59,7 +59,7 @@ grunt
 
 >modular js using es6/esnext pattern [airbnb styleguide](https://github.com/airbnb/javascript)
 
-compile with either [babeljs](https://babeljs.io/) (greater ES6 support) or [typescript](http://www.typescriptlang.org/) (strongly typed, angular2.0) currently only compiles to commonJS, [jQuery](https://jquery.com/) is imported via npm
+compile with either [babeljs](https://babeljs.io/) (greater ES6 support) or [typescript](http://www.typescriptlang.org/) (strongly typed, angular2.0) currently only compiles to commonJS, [jQuery](https://jquery.com/) is imported via npm for babel, src/js/lib/jquery.d.ts for typescript
 
 set in Gruntfile.js
 ```js
@@ -134,4 +134,4 @@ guide [KSS](https://www.npmjs.com/package/grunt-kss)
 
 ##trello
 
-*set up trello board for module dev
+*set up trello board for module dev???
