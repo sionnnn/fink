@@ -1,9 +1,0 @@
-{
-    "name": "FINK",
-    "version": "0.1.0",
-    "devDependencies": {
-        "grunt": "~0.4.1",
-        "load-grunt-config": "^0.17.1",            
-        "grunt-contrib-watch": "~0.3.1"
-    }
-}
