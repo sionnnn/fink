@@ -3,6 +3,6 @@ function echo(str){
 }
 
 self.onmessage = function(e) {
-	let x = e.data.value;
+	var x = e.data.value;
 	echo(x);
 };

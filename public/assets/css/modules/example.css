@@ -1,0 +1,39 @@
+/*
+Variables
+
+Styleguide 0.2
+*/
+/*
+Example
+
+Styleguide 1.0
+*/
+#body {
+  font: 100% Arial, sans-serif;
+  font-size: 17px;
+  line-height: 21px;
+  text-align: right; }
+
+/*
+Headings
+
+h1, h2, h3, h4, h5
+
+Markup: <h1>heading</h1> <h2>heading</h2> <h3>heading</h3> <h4>heading</h4> <h5>heading</h5>
+
+Styleguide 1.1
+*/
+h1 {
+  font: 1em/0.75em Tahoma, sans-serif; }
+
+h2 {
+  font: 1em/1em Tahoma, sans-serif; }
+
+h3 {
+  font: 1em/1.21em Tahoma, sans-serif; }
+
+h4 {
+  font: 1em/1.21em Tahoma, sans-serif; }
+
+h5 {
+  font: 1em/1.21em Tahoma, sans-serif; }

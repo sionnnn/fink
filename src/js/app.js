@@ -1,4 +1,4 @@
-import {ExampleClass} from './modules/example';
+//import {ExampleClass} from './modules/example';
 //use require to import jquery
 var $ = require('jquery');
 console.log($);
@@ -13,4 +13,4 @@ worker.onmessage = function(e) {
 worker.onerror = function(e) {
 	console.log(e);
 };
-worker.postMessage({'value':'echo from babel'});
+worker.postMessage({'value':'echo from babel test'});

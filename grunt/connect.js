@@ -2,7 +2,8 @@ module.exports = {
 	server: {
         options: {
             port: 8080,
-            base: './public/'
+			keepalive:false,
+            base: './public'
         }
     }
 };

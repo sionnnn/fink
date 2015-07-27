@@ -9211,15 +9211,14 @@ return jQuery;
 }));
 
 },{}],2:[function(require,module,exports){
+//import {ExampleClass} from './modules/example';
+//use require to import jquery
 'use strict';
 
-var _modulesExample = require('./modules/example');
-
-//use require to import jquery
 var $ = require('jquery');
 console.log($);
 
-var eg = new _modulesExample.ExampleClass('babel eg');
+var eg = new ExampleClass('babel eg');
 console.log(eg.echo('echo test'));
 
 var worker = new Worker('assets/js/webworkers/worker.js');
@@ -9229,46 +9228,6 @@ worker.onmessage = function (e) {
 worker.onerror = function (e) {
 	console.log(e);
 };
-worker.postMessage({ 'value': 'echo from babel' });
+worker.postMessage({ 'value': 'echo from babel test' });
 
-},{"./modules/example":3,"jquery":1}],3:[function(require,module,exports){
-/**
- * @class ExampleClass
- * @classdesc FINK definition example module
- */
-"use strict";
-
-exports.__esModule = true;
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-var ExampleClass = (function () {
-    /**
-     * @constructor
-     * @param {string} str
-     * @property {string} output
-     */
-
-    function ExampleClass(str) {
-        _classCallCheck(this, ExampleClass);
-
-        this.output = str;
-    }
-
-    /**
-    * @memberOf ExampleClass
-    * @param {string} str
-    * @returns {string}
-    */
-
-    ExampleClass.prototype.echo = function echo(str) {
-        //return this.output + " " + str;
-        return this.output + " " + str;
-    };
-
-    return ExampleClass;
-})();
-
-exports.ExampleClass = ExampleClass;
-
-},{}]},{},[2]);
+},{"jquery":1}]},{},[2]);
