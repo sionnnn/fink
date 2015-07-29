@@ -16,12 +16,18 @@
     "tests"
   ],
   "dependencies": {
-    "modernizer": "~2.8.2",
     "jquery": "~2.1.4"
   },
   "devDependencies": {
     "velocity": "~1.2.2",
     "snap.svg": "~0.4.1",
-    "animate.css": "~3.3.0"
+    "animate.css": "~3.3.0",
+    "normalize.css": "~3.0.3",
+    "modernizr": "~2.8.3"
+  },
+  "overrides": {
+    "modernizr": {
+      "main": "modernizr-custom.js"
+    }
   }
 }

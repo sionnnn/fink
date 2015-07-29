@@ -1,3 +1,3 @@
-# F_NK styleguide
+# styleguide
 
 landing page for dynamic styleguide

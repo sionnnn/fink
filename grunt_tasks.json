@@ -32,18 +32,6 @@
 			"newer:webp":true
 		}
 	},
-	"html":{
-		"runOn":["build"],
-		"tasks":{
-			"newer:zetzer":true
-		}
-	},
-	"htmlOps":{
-		"runOn":["ops"],
-		"tasks":{
-			"newer:cacheBust":true
-		}
-	},
 	"docs":{
 		"runOn":["build"],
 		"tasks":{

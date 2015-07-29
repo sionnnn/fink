@@ -1,13 +1,16 @@
 var gulp = require('gulp');
 var styleguide = require('sc5-styleguide');
 var sass = require('gulp-sass');
+var pkg = require('./package.json');
+
 var outputPath = 'docs/styleguide',
-    source = 'src/scss/**/*.scss';
+    source = 'src/scss/**/*.scss',
+    styleTitle = pkg.name + " " + pkg.version + ' styleguide';
 
 gulp.task('styleguide:generate', function() {
   return gulp.src(source)
     .pipe(styleguide.generate({
-        title: 'F_NK styleguide',
+        title: styleTitle,
         server: true,
         rootPath: outputPath,
         overviewPath: 'docs/overview.md'
