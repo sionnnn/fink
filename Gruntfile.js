@@ -2,34 +2,13 @@ module.exports = function(grunt) {
 
 	require('time-grunt')(grunt);
 
-	var gulp = require('gulp'),
-		styleguide = require('sc5-styleguide');
+	var app_config = grunt.file.readJSON('grunt_tasks.json');
 
 	var conf = {
     	pkg: grunt.file.readJSON('package.json'),
 		/**
 		base
 		*/
-		watch:{
-			css:{
-				files: ['src/scss/**/*.scss'],
-			    tasks: ['newer:sass'],
-			    options: {
-			      spawn: false,
-			    },
-			},
-			js:{
-				files: ['./src/**/*.js'],
-			    tasks: ['newer:browserify:babel'],
-			    options: {
-			      spawn: false,
-			    },
-			},
-			styleguide: {
-				files: 'src/**/*.scss',
-				tasks: ['sass', 'gulp:styleguide-generate', 'gulp:styleguide-applystyles']
-			}
-		},
 		connect :{
 			server: {
 		        options: {
@@ -98,7 +77,7 @@ module.exports = function(grunt) {
 		cssmin:{
 			combine: {
 				files: {
-					'public/assets/css/site.min.css': ['src/assets/css/site.css']
+					'public/assets/css/site.min.css': ['public/assets/css/site.css']
 				}
 			}
 		},
@@ -191,22 +170,36 @@ module.exports = function(grunt) {
 		*/
 		sass :{
 			options: {
-		        sourceMap: false,
+		        sourceMap: false
 		    },
-			build: {
-		        /*files: {
-		            '<%= paths.dest.root %>/assets/css/site.css': '<%= paths.src.root %>/scss/site.scss'
-		        }*/
-				files: [
-				    {
-				        expand: true,
-				        cwd: 'src/scss/',
-				        src: '**/*.scss',
-				        dest: 'public/assets/css/',
-						ext: '.css'
-				    }
-				]
+			dist: {
+		        files: {
+					'public/assets/css/site.css': 'src/scss/site.scss'
+		        }
 			}
+		},
+		//https://github.com/postcss/postcss
+		postcss: {
+			options: {
+				map: true,
+				processors: [
+					require('autoprefixer-core')({browsers: ['last 1 version']})
+				]
+			},
+			dist: {
+				src: 'public/assets/css/site.css'
+			}
+		},
+		asset_cachebuster: {
+			options: {
+				buster: "<%= pkg.version %>"+ "." + Date.now().toString(),
+				ignore: []
+			},
+			build: {
+		        files: {
+		            'public/assets/css/site.min.css':['public/assets/css/site.min.css']
+		        }
+    		}
 		},
 		stripmq: {
 			options: {
@@ -226,6 +219,38 @@ module.exports = function(grunt) {
 					'public/assets/css/site.legacy.css': 'public/assets/css/site.css'
 				}
 			},
+		},
+		modernizr: {	    
+		    dist: {
+		        devFile : "./public/assets/components/modernizr/modernizr.js",
+		        outputFile : "./public/assets/components/modernizr/modernizr-custom.js",
+		        extra : {
+		            shiv : true,
+		            printshiv : false,
+		            load : true,
+		            mq : false,
+		            cssclasses : true
+		        },
+		        extensibility : {
+		            addtest : false,
+		            prefixed : false,
+		            teststyles : false,
+		            testprops : false,
+		            testallprops : false,
+		            hasevents : false,
+		            prefixes : false,
+		            domprefixes : false,
+		            cssclassprefix: ""
+		        },
+		        uglify : true,
+		        tests : grunt.file.readJSON('modernizr.json').tests,
+		        parseFiles : false,
+		        matchCommunityTests : false,
+		        customTests : [
+		        	// "dev/custom-tests/ios.js",
+		        	// "dev/custom-tests/mobile.js"
+		        ]
+		    }	 	
 		},
 		/**
 		js
@@ -248,25 +273,6 @@ module.exports = function(grunt) {
 		/**
 		docs
 		*/
-		gulp: {
-			'styleguide-generate': function() {
-				var outputPath = 'docs/styleguide';
-
-				return gulp.src(['src/scss/**/*.scss'])
-				.pipe(styleguide.generate({
-					title: 'F_NK styleguide',
-					server: true,
-					rootPath: 'docs/styleguide',
-					overviewPath:'docs/overview.md'
-				}))
-				.pipe(gulp.dest('docs/styleguide'));
-			},
-			'styleguide-applystyles': function() {
-				gulp.src('src/scss/**/*.scss')
-					.pipe(styleguide.applyStyles())
-					.pipe(gulp.dest('docs/styleguide'));
-			}
-		},
 		jsdoc:{
 			dist : {
 		        src: ['public/assets/js/**/*'], 
@@ -284,20 +290,177 @@ module.exports = function(grunt) {
 					buildUi   : true
 				}
 			}
+		},
+		/**
+		html
+		*/
+		zetzer: {
+			prototype: {
+				options: {
+					env: {
+						title: "<%= pkg.name %> <%= pkg.version %> prototype",
+						pageurl: "public"
+					},
+					partials: "src/html/partials",
+					templates: "src/html/templates",
+					dot_template_settings: { 
+						strip: false,
+						varname: 'it'
+					}
+				},
+				files: [{
+					expand: true,
+					cwd: "src/html/pages/",
+					src: "**/*.html",
+					dest: "public",
+					ext: ".html",
+					flatten: false
+				}]
+			}
+		},
+		cacheBust: {
+			assets: {
+				files: [{   
+					expand: true,
+					cwd: 'public/',
+					baseDir: 'public/',
+					src: ['**/*.html']
+				}]
+			} 
+		},
+		/**
+		ops
+		*/
+		wiredep: {
+			task: {
+				src: [
+				'public/**/*.html',   // .html support...
+				//'app/views/**/*.jade',   // .jade support...
+				//'app/styles/main.scss',  // .scss & .sass support...
+				//'app/config.yml'         // and .yml & .yaml support out of the box!
+				],
+				options: {
+					devDependencies: true
+				}
+			}
+		},
+		real_favicon: {
+			my_icon: {
+				src: 'src/favicon/favicon.png',
+				dest: 'public/assets/favicons',
+				icons_path: '/assets/favicons',
+				html: ['src/html/partials/head.html'],
+				design: {
+					ios: {
+						//picture_aspect: 'background_and_margin',
+						//background_color: '#654321',
+						//margin: 4
+					},
+					windows: {
+						//picture_aspect: 'white_silhouette',
+						//background_color: '#123456'
+					}
+				},
+				settings: {
+					compression: 5,
+					scaling_algorithm: 'NearestNeighbor'
+				}
+			}
+		},
+		"bower-install-simple": {
+	        options: {
+	            color: true,
+	            directory: "./lib"
+	        },
+	        dev: {
+	            options: {
+	                production: false
+	            }
+	        }
+	    },
+		exec: {
+			styleguide: {
+				command: 'start gulp watch &'
+			}
+		},
+		watch:{
+			css:{
+				files: ['src/scss/**/*.scss'],
+			    tasks: ['sass:dist'],
+			    options: {
+			      spawn: false,
+			    },
+			},
+			js:{
+				files: ['./src/js/**/*.js'],
+			    tasks: ['newer:browserify:babel'],
+			    options: {
+			      spawn: false,
+			    },
+			},
+			html:{
+				files: ['./src/html/**/*.html'],
+			    tasks: ['newer:zetzer','wiredep'],
+			    options: {
+			      spawn: false,
+			    },
+			},
+			favicon:{
+				files: ['./src/favicon/*.*'],
+			    tasks: ['real_favicon'],
+			    options: {
+			      spawn: false,
+			    }
+			}
+		},
+		concurrent: {
+			options: {
+				logConcurrentOutput: true
+			},
+			watch: {
+				tasks: ["watch:css", 
+						"watch:js", 
+						"watch:html",
+						"watch:favicon"]
+			}
 		}
 	};
 
 	grunt.initConfig(conf);
 	require('jit-grunt')(grunt);
-
-    grunt.registerTask('codestyle', ['newer:csslint','newer:jscs:main']);
-    grunt.registerTask('minify', ['newer:imagemin','newer:cssmin','newer:uglify','newer:webp']);
-    grunt.registerTask('validate', ['newer:eslint','newer:csslint','newer:htmlhintplus']);
-    grunt.registerTask('docs', ['newer:jsdoc','newer:phantomas','gulp:styleguide-generate', 'gulp:styleguide-applystyles']);
-	grunt.registerTask('styleguide', ['gulp:styleguide-generate', 'gulp:styleguide-applystyles','watch:styleguide']);
 	
-    grunt.registerTask('build', ['copy','newer:sass','newer:browserify:babel','codestyle','validate','stripmq','minify','docs']);
-	grunt.registerTask('commit', ['build']);
+	/**
+	registerTask handled from app_config file
+	allows for yeoman integration
+	*/
+	var config_tasks = {
+		"build":['copy','newer:bower-install-simple','real_favicon','newer:modernizr','sass:dist','newer:browserify:babel','newer:zetzer','wiredep']
+	};
+	function _regsiterConfigTasks(name,section){
+		if(!!section){
+			var arr = [];
+			for(var key in section.tasks) {
+				if(section.tasks[key]) {
+					arr.push(key);
+					if(typeof section.tasks[key] !== "boolean") grunt.loadNpmTasks(section.tasks[key].package);
+				}
+			}
+			if(arr.length > 0) {
+				grunt.registerTask(name, arr);
+				config_tasks[section.runOn].push(name);
+			}
+		};
+	};
+	for(var section in app_config){
+		var obj = app_config[section];
+		_regsiterConfigTasks(section,app_config[section]);
+	};
 
-    grunt.registerTask('default', ['copy','connect','watch']);
+	/**
+	load standalone task
+	*/
+    grunt.loadNpmTasks("grunt-asset-cachebuster");
+
+    grunt.registerTask('build', config_tasks['build']);
+    grunt.registerTask('default', ['build','connect','concurrent:watch']);
 };
