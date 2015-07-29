@@ -1,7 +1,6 @@
 module.exports = function(grunt) {
 
 	require('time-grunt')(grunt);
-
 	var app_config = grunt.file.readJSON('grunt_tasks.json');
 
 	var conf = {
