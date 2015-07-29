@@ -229,7 +229,7 @@ module.exports = function(grunt) {
 		            cssclassprefix: ""
 		        },
 		        uglify : true,
-		        tests : grunt.file.readJSON('modernizr.json').tests,
+		        tests : grunt.file.readJSON('grunt_config/modernizr.json').tests,
 		        parseFiles : false,
 		        matchCommunityTests : false,
 		        customTests : [
@@ -356,7 +356,7 @@ module.exports = function(grunt) {
 		"bower-install-simple": {
 	        options: {
 	            color: true,
-	            directory: "./lib"
+	            directory: "public/assets/components"
 	        },
 	        dev: {
 	            options: {
@@ -420,7 +420,7 @@ module.exports = function(grunt) {
 	allows for yeoman integration
 	*/
 	var config_tasks = {
-		"build":['copy','newer:bower-install-simple','real_favicon','newer:modernizr','sass:dist','newer:browserify:babel','newer:zetzer','wiredep']
+		"build":['copy','bower-install-simple','real_favicon','newer:modernizr','sass:dist','newer:browserify:babel','newer:zetzer','wiredep']
 	};
 	function _regsiterConfigTasks(name,section){
 		if(!!section){

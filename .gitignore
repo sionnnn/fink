@@ -2,7 +2,8 @@ docs/jsdoc
 docs/performance
 docs/styleguide
 node_modules
-public/*.*
+public/assets
+public/*.html
 
 # Windows image file caches
 Thumbs.db
