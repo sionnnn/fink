@@ -2,7 +2,6 @@
 	"codestyle":{
 		"runOn":["build"],
 		"tasks":{
-			"newer:csslint":true,
 			"newer:jscs":true
 		}
 	},
