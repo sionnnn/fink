@@ -1,4 +1,6 @@
 docs/jsdoc
+docs/performance
+docs/styleguide
 node_modules
 public/*.*
 
