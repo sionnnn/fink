@@ -28,24 +28,11 @@ module.exports = function(grunt) {
 		/**
 		codestyle
 		*/
-		csslint :{
-			options: {
-		        force: true
-		    },
-		    lax: {
-		        options: {
-		            force: true,
-		            import: false,
-		            csslintrc: 'rules.csslintrc'
-		        },
-		        src: ['public/assets/css/site.css']
-		    }
-		},
 		jscs: {
 			main:{
 				src: ['src/js/**/*.js'],
 				options: {
-					config: '.jscsrc',
+					config: 'grunt_config/.jscsrc',
 					esnext: true,
 					verbose: true,
 					fix:true
@@ -140,7 +127,7 @@ module.exports = function(grunt) {
 		eslint: {
 			target: ['.src/js/**/*.js'],
 		    options: {
-		   		configFile: '.eslintrc'
+		   		configFile: 'grunt_config/.eslintrc'
 			}
 		},
 		csslint: {
@@ -151,14 +138,14 @@ module.exports = function(grunt) {
 		        options: {
 		            force: true,
 		            import: false,
-		            csslintrc: 'rules.csslintrc'
+		            csslintrc: 'grunt_config/rules.csslintrc'
 		        },
 		        src: ['public/assets/css/site.css']
 		    }
 		},
 		htmlhintplus: {
 			options: {
-		        htmlhintrc: '.htmlhintrc'
+		        htmlhintrc: 'grunt_config/.htmlhintrc'
 		    },
 		    html: {
 		        src: ['public/**/*.html']
