@@ -1,5 +1,6 @@
 docs/jsdoc
 node_modules
+public/*
 
 # Windows image file caches
 Thumbs.db
