@@ -1,4 +1,4 @@
-//import {ExampleClass} from './modules/example';
+import {ExampleClass} from './modules/example';
 //use require to import jquery
 var $ = require('jquery');
 console.log($);
