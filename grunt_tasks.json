@@ -1,33 +1,54 @@
 {
-	"codestyle":{
+	"pre_ops":{
 		"runOn":["build"],
 		"tasks":{
-			"newer:jscs":true
+			"copy":true,
+			"bower-install-simple":true,
+			"newer:modernizr":true
 		}
 	},
-	"validate":{
+	"js":{
 		"runOn":["build"],
 		"tasks":{
+			"newer:browserify:babel":true,
+			"newer:jscs":true,
 			"newer:eslint":true,
+			"newer:uglify":true
+		}
+	},
+	"css":{
+		"runOn":["build"],
+		"tasks":{
+			"sass":true,
+			"newer:sass-convert":true,
 			"newer:csslint":true,
+			"newer:postcss":true,
+			"newer:stripmq":true,
+			"newer:cssmin":true
+		}
+	},
+	"html":{
+		"runOn":["build"],
+		"tasks":{
+			"newer:zetzer":true,
+			"wiredep":true,
 			"newer:htmlhintplus":{
 				"package":"grunt-htmlhint-plus"
 			}
 		}
 	},
-	"cssOps":{
+	"icons":{
 		"runOn":["build"],
 		"tasks":{
-			"newer:postcss":true,
-			"newer:stripmq":true
+			"real_favicon":true,
+			"svgmin:icons":true,
+			"grunticon:build":true
 		}
 	},
-	"minify":{
+	"images":{
 		"runOn":["build"],
 		"tasks":{
 			"newer:imagemin":true,
-			"newer:cssmin":true,
-			"newer:uglify":true,
 			"newer:webp":true
 		}
 	},
@@ -35,8 +56,15 @@
 		"runOn":["build"],
 		"tasks":{
 			"newer:jsdoc":true,
-			"newer:phantomas":true,
-			"exec:styleguide":true
+			"exec:styleguide":true,
+			"newer:phantomas":true
 		}
-	}
+	},
+	"watchers":["watch:css", 
+				"watch:js", 
+				"watch:html",
+				"watch:deps",
+				"watch:favicon",
+				"watch:svgmin",
+				"watch:grunticon"]
 }

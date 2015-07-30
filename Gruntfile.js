@@ -2,6 +2,7 @@ module.exports = function(grunt) {
 
 	require('time-grunt')(grunt);
 	var app_config = grunt.file.readJSON('grunt_tasks.json');
+	var watchers = app_config.watchers;
 
 	var conf = {
     	pkg: grunt.file.readJSON('package.json'),
@@ -37,6 +38,16 @@ module.exports = function(grunt) {
 					verbose: true,
 					fix:true
 				}
+			}
+		},
+		'sass-convert': {
+			build:{
+				options: {
+					indent: 4
+				},
+				files: [{
+					src: ['src/scss/**/*.scss']
+				}]
 			}
 		},
 		/**
@@ -121,6 +132,34 @@ module.exports = function(grunt) {
 	            }
 	        }
 	    },
+		grunticon: {
+			build: {
+				files: [{
+					expand: true,
+					cwd: 'src/icons/src',
+					src: ['*.*'],
+					dest: 'public/assets/icons'
+				}],
+				options: {
+					enhanceSVG: true,
+					compressPNG: true
+				}
+			}
+		},
+		svgmin: {
+			options: grunt.file.readJSON('grunt_config/svgmin.json'),
+		    icons: {
+		        files: [
+		            {
+		                expand: true,
+		                cwd: "src/icons/svgs",
+		                src: ["*.svg"],
+		                dest: "src/icons/src"
+		            }
+
+		        ]
+		    }
+		},
 		/**
 		validate
 		*/
@@ -372,7 +411,7 @@ module.exports = function(grunt) {
 		watch:{
 			css:{
 				files: ['src/scss/**/*.scss'],
-			    tasks: ['sass:dist'],
+			    tasks: ['sass'],
 			    options: {
 			      spawn: false,
 			    },
@@ -386,7 +425,14 @@ module.exports = function(grunt) {
 			},
 			html:{
 				files: ['./src/html/**/*.html'],
-			    tasks: ['newer:zetzer','wiredep'],
+			    tasks: ['newer:zetzer'],
+			    options: {
+			      spawn: false,
+			    },
+			},
+			deps:{
+				files: ['public/**/*.html'],
+			    tasks: ['wiredep'],
 			    options: {
 			      spawn: false,
 			    },
@@ -397,6 +443,22 @@ module.exports = function(grunt) {
 			    options: {
 			      spawn: false,
 			    }
+			},
+			svgmin: {
+				files: ["src/icons/svgs/*.svg"],
+				tasks: ["svgmin:icons"]
+			},
+			grunticon: {
+				files: ["src/icons/src/*.*"],
+				tasks: ["grunticon:build"]
+			}
+		},
+		open : {
+			dist : {
+				path: 'http://localhost:8080/'
+			},
+			styleguide : {
+				path: 'http://localhost:3000/'
 			}
 		},
 		concurrent: {
@@ -404,10 +466,7 @@ module.exports = function(grunt) {
 				logConcurrentOutput: true
 			},
 			watch: {
-				tasks: ["watch:css", 
-						"watch:js", 
-						"watch:html",
-						"watch:favicon"]
+				tasks: watchers
 			}
 		}
 	};
@@ -420,7 +479,7 @@ module.exports = function(grunt) {
 	allows for yeoman integration
 	*/
 	var config_tasks = {
-		"build":['copy','bower-install-simple','real_favicon','newer:modernizr','sass:dist','newer:browserify:babel','newer:zetzer','wiredep']
+		"build":[]
 	};
 	function _regsiterConfigTasks(name,section){
 		if(!!section){
@@ -430,7 +489,8 @@ module.exports = function(grunt) {
 					arr.push(key);
 					if(typeof section.tasks[key] !== "boolean") grunt.loadNpmTasks(section.tasks[key].package);
 				}
-			}
+			};
+
 			if(arr.length > 0) {
 				grunt.registerTask(name, arr);
 				config_tasks[section.runOn].push(name);
@@ -438,8 +498,10 @@ module.exports = function(grunt) {
 		};
 	};
 	for(var section in app_config){
-		var obj = app_config[section];
-		_regsiterConfigTasks(section,app_config[section]);
+		if(section !== "watchers") {
+			var section_obj = app_config[section];
+			_regsiterConfigTasks(section,section_obj);
+		}
 	};
 
 	/**
@@ -448,5 +510,5 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks("grunt-asset-cachebuster");
 
     grunt.registerTask('build', config_tasks['build']);
-    grunt.registerTask('default', ['build','connect','concurrent:watch']);
+    grunt.registerTask('default', ['build','connect','open','concurrent:watch']);
 };
