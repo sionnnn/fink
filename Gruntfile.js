@@ -24,6 +24,12 @@ module.exports = function(grunt) {
 		        src:['**/*'],
 				dest: 'public/assets/js/webworkers',
 		        expand: true
+		    },
+			scssmods: {
+		        cwd: 'public/assets/components/dump/modules',
+		        src:['**/*'],
+				dest: 'src/scss/modules',
+		        expand: true
 		    }
 		},
 		/**
@@ -359,13 +365,14 @@ module.exports = function(grunt) {
 		wiredep: {
 			task: {
 				src: [
-				'public/**/*.html',   // .html support...
-				//'app/views/**/*.jade',   // .jade support...
-				//'app/styles/main.scss',  // .scss & .sass support...
-				//'app/config.yml'         // and .yml & .yaml support out of the box!
+					'public/**/*.html',   // .html support...
+					//'app/views/**/*.jade',   // .jade support...
+					//'app/styles/main.scss',  // .scss & .sass support...
+					//'app/config.yml'         // and .yml & .yaml support out of the box!
 				],
 				options: {
-					devDependencies: true
+					devDependencies: true,
+					exclude: [ 'dump' ]
 				}
 			}
 		},
@@ -493,7 +500,7 @@ module.exports = function(grunt) {
 
 			if(arr.length > 0) {
 				grunt.registerTask(name, arr);
-				config_tasks[section.runOn].push(name);
+				config_tasks["build"].push(name);
 			}
 		};
 	};

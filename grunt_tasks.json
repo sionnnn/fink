@@ -2,9 +2,9 @@
 	"pre_ops":{
 		"runOn":["build"],
 		"tasks":{
-			"copy":true,
 			"bower-install-simple":true,
-			"newer:modernizr":true
+			"modernizr":true,
+			"copy":true
 		}
 	},
 	"js":{

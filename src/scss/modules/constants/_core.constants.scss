@@ -1,0 +1,235 @@
+// === Variables
+
+/*
+Constants
+
+[Description for list class]
+
+Styleguide 0.1
+*/
+
+// some colours that we can use to style elements/debug information at various breakpoints
+$clr-xs: #9b59b6;
+$clr-sm: #f39c12;
+$clr-md: #1abc9c;
+$clr-lg: #d6080d;
+$clr-xl: #3498db;
+
+// Cubic
+$ease-in-cubic: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+$ease-out-cubic: cubic-bezier(0.215, 0.61, 0.355, 1);
+$ease-in-out-cubic: cubic-bezier(0.645, 0.045, 0.355, 1);
+
+// Circ
+$ease-in-circ: cubic-bezier(0.6, 0.04, 0.98, 0.335);
+$ease-out-circ: cubic-bezier(0.075, 0.82, 0.165, 1);
+$ease-in-out-circ: cubic-bezier(0.785, 0.135, 0.15, 0.86);
+
+// Expo
+$ease-in-expo: cubic-bezier(0.95, 0.05, 0.795, 0.035);
+$ease-out-expo: cubic-bezier(0.19, 1, 0.22, 1);
+$ease-in-out-expo: cubic-bezier(1, 0, 0, 1);
+
+// Quad
+$ease-in-quad: cubic-bezier(0.55, 0.085, 0.68, 0.53);
+$ease-out-quad: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+$ease-in-out-quad: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+
+// Quart
+$ease-in-quart: cubic-bezier(0.895, 0.03, 0.685, 0.22);
+$ease-out-quart: cubic-bezier(0.165, 0.84, 0.44, 1);
+$ease-in-out-quart: cubic-bezier(0.77, 0, 0.175, 1);
+
+// Quint
+$ease-in-quint: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+$ease-out-quint: cubic-bezier(0.23, 1, 0.32, 1);
+$ease-in-out-quint: cubic-bezier(0.86, 0, 0.07, 1);
+
+// Sine
+$ease-in-sine: cubic-bezier(0.47, 0, 0.745, 0.715);
+$ease-out-sine: cubic-bezier(0.39, 0.575, 0.565, 1);
+$ease-in-out-sine: cubic-bezier(0.445, 0.05, 0.55, 0.95);
+
+// Back
+$ease-in-back: cubic-bezier(0.6, -0.28, 0.735, 0.045);
+$ease-out-back: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+$ease-in-out-back: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+// iPad Any
+$device-ipad-any: "only screen and (min-device-width:768px) and (max-device-width:1024px)";
+$device-ipad-any-landscape: "only screen and (min-device-width:768px) and (max-device-width:1024px) and (orientation:landscape)";
+$device-ipad-any-portrait: "only screen and (min-device-width:768px) and (max-device-width:1024px) and (orientation:portrait)";
+
+// iPad 3G + 4G
+$device-ipad-4g: "only screen and (min-device-width:768px) and (max-device-width:1024px) and (-webkit-min-device-pixel-ratio:2)";
+$device-ipad-4g-landscape: "only screen and (min-device-width:768px) and (max-device-width:1024px) and (orientation:landscape) and (-webkit-min-device-pixel-ratio:2)";
+$device-ipad-4g-portrait: "only screen and (min-device-width:768px) and (max-device-width:1024px) and (orientation:portrait) and (-webkit-min-device-pixel-ratio:2)";
+
+// iPad 1G + 2G
+$device-ipad-2g: "only screen and (min-device-width:768px) and (max-device-width:1024px) and (-webkit-min-device-pixel-ratio:1)";
+$device-ipad-2g-landscape: "only screen and (min-device-width:768px) and (max-device-width:1024px) and (orientation:landscape) and (-webkit-min-device-pixel-ratio:1)";
+$device-ipad-2g-portrait: "only screen and (min-device-width:768px) and (max-device-width:1024px) and (orientation:portrait) and (-webkit-min-device-pixel-ratio:1)";
+
+// iPad Mini
+$device-ipad-mini-any: "and (min-device-width:768px) and (max-device-width:1024px) and (-webkit-min-device-pixel-ratio:1)";
+$device-ipad-mini-any-landscape: "and (min-device-width:768px) and (max-device-width:1024px) and (orientation:landscape) and (-webkit-min-device-pixel-ratio:1)";
+$device-ipad-mini-any-portrait: "and (min-device-width:768px) and (max-device-width:1024px) and (orientation:portrait) and (-webkit-min-device-pixel-ratio:1)";
+
+// iPhone 5
+$device-iphone5: "only screen and (min-device-width:320px) and (max-device-width:568px)";
+$device-iphone5-landscape: "only screen and (min-device-width:320px) and (max-device-width:568px) and (orientation:landscape)";
+$device-iphone5-portrait: "only screen and (min-device-width:320px) and (max-device-width:568px) and (orientation:portrait)";
+
+// iPhone 2G, 3G, 4, 4S
+$device-iphone: "only screen and (min-device-width:320px) and (max-device-width:480)";
+$device-iphone-landscape: "only screen and (min-device-width:320px) and (max-device-width:480) and (orientation:landscape)";
+$device-iphone-portrait: "only screen and (min-device-width:320px) and (max-device-width:480) and (orientation:portrait)";
+
+// iPhone 6
+$device-iphone6: "only screen and (min-device-width:375px) and (max-device-width:667px)";
+$device-iphone6-landscape: "only screen and (min-device-width:375px) and (max-device-width:667px) and (orientation:landscape)";
+$device-iphone6-portrait: "only screen and (min-device-width:375px) and (max-device-width:667px) and (orientation:portrait)";
+
+// iPhone 6+
+$device-iphone6plus: "only screen and (min-device-width:414px) and (max-device-width:736px)";
+$device-iphone6plus-landscape: "only screen and (min-device-width:414px) and (max-device-width:736px) and (orientation:landscape)";
+$device-iphone6plus-portrait: "only screen and (min-device-width:414px) and (max-device-width:736px) and (orientation:portrait)";
+
+// iPhone 6 and 6+
+$device-iphone6all: "only screen and (max-device-width:640px), only screen and (max-device-width:667px), only screen and (max-width:480px)";
+$device-iphone6all-portrait: "only screen and (max-device-width:640px), only screen and (max-device-width:667px), only screen and (max-width:480px) and (orientation:portrait)";
+$device-iphone6all-landscape: "only screen and (max-device-width:640px), only screen and (max-device-width:667px), only screen and (max-width:480px) and (orientation:landscape)";
+
+// Brand colours
+$brand-think: #ffd517;
+$brand-twitter: #55acee;
+$brand-facebook: #3b5998;
+$brand-youtube: #e52d27;
+$brand-pinterest: #cc2127;
+$brand-instagram: #3f729b;
+$brand-blogger: #F79538;
+$brand-delicious: #3399ff;
+$brand-deviantart: #4e6252;
+$brand-dribbble: #444444;
+$brand-flickr: #ff0084;
+$brand-forrst: #019F6F;
+$brand-github: #333;
+$brand-google-drive: #3777E3;
+$brand-google-plus: #dd4b39;
+$brand-lastfm: #AF0921;
+$brand-linkedin: #0976b4;
+$brand-picasa: #E14A3F;
+$brand-reddit: #ff4500;
+$brand-skype: #00aff0;
+$brand-stackoverflow: #eb4924;
+$brand-stumbleupon: #EB4823;
+$brand-tumblr: #35465c;
+$brand-vimeo: #162221;
+$brand-wordpress: #21759b;
+$brand-yahoo: #400191;
+$brand-tripadvisor: #39A94A;
+$brand-email: red;
+$brand-adn: #4A484C;
+$brand-android: #a4c639;
+$brand-apple: #979797;
+$brand-behance: #1769ff;
+$brand-bitbucket: #205081;
+$brand-bitcoin: #ee9209;
+$brand-codepen: #000;
+$brand-css3: #1680C0;
+$brand-digg: #000;
+$brand-dropbox: #007ee5;
+$brand-drupal: #0077c0;
+$brand-empire: #000;
+$brand-foursquare: #0072b1;
+$brand-ge: #000;
+$brand-git: #333;
+$brand-gittip: #663300;
+$brand-google: #4285f4;
+$brand-hacker-news: #ff6600;
+$brand-html5: #e34f26;
+$brand-joomla: #142849;
+$brand-jsfiddle: #4679BD;
+$brand-linux: #333333;
+$brand-maxcdn: #FF6600;
+$brand-openid: #F78C40;
+$brand-pagelines: #000;
+$brand-pied-piper: #2f9f46;
+$brand-qq: #000;
+$brand-ra: #000;
+$brand-rebel: #000;
+$brand-renren: #005EAC;
+$brand-share: #01bf01;
+$brand-slack: #0f7965;
+$brand-soundcloud: #f80;
+$brand-spotify: #7ab800;
+$brand-stack-exchange: #000;
+$brand-stack-overflow: #fe7a15;
+$brand-steam: #0B0B0B;
+$brand-tencent-weibo: #74AF2C;
+$brand-trello: #256a92;
+$brand-vine: #00b488;
+$brand-vk: #45668e;
+$brand-wechat: #93d034;
+$brand-weibo: #E71D34;
+$brand-weixin: #93d034;
+$brand-windows: #00bcf2;
+$brand-xing: #026466;
+
+// set up some basic font families
+$sans-font-family: Arial, sans-serif;
+$serif-font-family: Georgia, "Times New Roman", Times, serif;
+$mono-font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+
+// Typescaale settings taken from http://type-scale.com/ http://www.gridlover.net/
+$scale-minor-second: 1.067;
+
+// 15:16
+$scale-major-second: 1.125;
+
+// 8:9
+$scale-minor-third: 1.2;
+
+// 5:6
+$scale-major-third: 1.25;
+
+// 4:5
+$scale-perfect-fourth: 1.333;
+
+// 3:4
+$scale-augmented-fourth: 1.414;
+
+// 1:âˆš2
+$scale-perfect-fifth: 1.5;
+
+// 2:3
+$scale-minor-sixth: 1.6;
+
+// 5:8
+$scale-golden-ratio: 1.618;
+
+// 1:1.618
+$scale-major-sixth: 1.667;
+
+// 3:5
+$scale-minor-seventh: 1.778;
+
+// 9:16
+$scale-major-seventh: 1.875;
+
+// 8:15
+$scale-octave: 2;
+
+// 1:2
+$scale-major-tenth: 2.5;
+
+// 2:5
+$scale-major-eleventh: 2.667;
+
+// 3:8
+$scale-major-twelfth: 3;
+
+// 1:3
+$scale-double-octave: 4;
+
+// 1:4
