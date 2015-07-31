@@ -4,6 +4,9 @@ module.exports = function(grunt) {
 	var app_config = grunt.file.readJSON('grunt_tasks.json');
 	var watchers = app_config.watchers;
 
+	var webpbinpath = app_config.images.tasks["newer:webp"] ? require('webp-bin').path : "";//
+	var pcssprocessor = app_config.images.tasks["newer:postcss"] ? [require('autoprefixer-core')({browsers: ['last 1 version']})] : [];
+
 	var conf = {
     	pkg: grunt.file.readJSON('package.json'),
 		/**
@@ -23,12 +26,6 @@ module.exports = function(grunt) {
 		        cwd: 'src/js/webworkers',
 		        src:['**/*'],
 				dest: 'public/assets/js/webworkers',
-		        expand: true
-		    },
-			scssmods: {
-		        cwd: 'public/assets/components/dump/modules',
-		        src:['**/*'],
-				dest: 'src/scss/modules',
 		        expand: true
 		    }
 		},
@@ -114,7 +111,7 @@ module.exports = function(grunt) {
 	                dest: 'public/assets/css/images/'
 	            }],
 	            options: {
-	                binpath: require('webp-bin').path,
+	                binpath: webpbinpath,
 	                preset: 'photo',
 	                verbose: true,
 	                quality: 100,
@@ -401,7 +398,6 @@ module.exports = function(grunt) {
 		},
 		"bower-install-simple": {
 	        options: {
-	            color: true,
 	            directory: "public/assets/components"
 	        },
 	        dev: {

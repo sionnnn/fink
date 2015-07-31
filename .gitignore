@@ -4,6 +4,7 @@ docs/styleguide
 node_modules
 public/assets
 public/*.html
+lib
 
 # Windows image file caches
 Thumbs.db
