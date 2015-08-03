@@ -1,0 +1,22 @@
+/*
+Wrap if
+
+wrap-if($boolean, $selector)
+
+Styleguide 0.5.10
+*/
+
+@mixin wrap-if($boolean, $selector)
+{
+	@if($boolean)
+	{
+		#{$selector}
+		{
+			@content;
+		}
+	}
+	@else
+	{
+		@content;
+	}
+}

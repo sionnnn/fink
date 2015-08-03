@@ -1,0 +1,13 @@
+/*
+Size
+
+size($width, $height:$width)
+
+Styleguide 0.5.9
+*/
+
+@mixin size($width, $height:$width)
+{
+	width 			:$width;
+	height 			:$height;
+}

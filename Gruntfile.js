@@ -27,6 +27,12 @@ module.exports = function(grunt) {
 		        src:['**/*'],
 				dest: 'public/assets/js/webworkers',
 		        expand: true
+		    },
+			scssmodules: {
+		        cwd: 'public/assets/components/dump/modules',
+		        src:['**/*'],
+				dest: 'src/scss/modules',
+		        expand: true
 		    }
 		},
 		/**
@@ -204,7 +210,16 @@ module.exports = function(grunt) {
 		        files: {
 					'public/assets/css/site.css': 'src/scss/site.scss'
 		        }
-			}
+			}/*,
+			styleguide:{
+				files: [{
+					expand: true,
+					cwd: 'src/scss',
+					src: ['*.scss'],
+					dest: 'public/assets/css',
+					ext: '.css'
+				}]
+			}*/
 		},
 		//https://github.com/postcss/postcss
 		postcss: {

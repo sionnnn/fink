@@ -1,6 +1,6 @@
 {
   "directory" : "public/assets/components",
   "scripts": {
-        "postinstall": ""
+        "postinstall": "grunt copy:scssmodules"
     }
 }

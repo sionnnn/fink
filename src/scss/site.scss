@@ -1,10 +1,40 @@
 @charset "UTF-8";
 
 /*
-Global
+Base
 
 Styleguide 0.0
 */
 
+/*
+Site
+
+Styleguide 1.0
+*/
+
+/*
+Imports
+
+Styleguide 1.1
+*/
+
+@import "modules/normalize/generic.normalize";
+@import "modules/constants/core.constants";
 @import "_vars";
-@import "modules/example";
+@import "modules/defaults/settings.defaults";
+@import "modules/functions/function.all";
+@import "modules/mixins/mixin.all";
+@import "modules/placeholders/core.placeholders";
+/**
+@import "modules/elements/elements.head";
+@import "modules/elements/elements.sections";
+@import "modules/elements/elements.links";
+@import "modules/elements/elements.edits";
+@import "modules/elements/elements.tables";
+@import "modules/elements/elements.text";
+@import "modules/elements/elements.grouping";
+@import "modules/elements/elements.embedded";
+@import "modules/elements/elements.interactive";
+@import "modules/elements/elements.forms";
+*/
+@import "modules/utility/core.utility";

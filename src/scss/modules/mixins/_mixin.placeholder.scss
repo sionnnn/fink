@@ -1,0 +1,30 @@
+/*
+Placeholder
+
+placeholder()
+
+Styleguide 0.5.8
+*/
+
+@mixin placeholder()
+{
+	&::-webkit-input-placeholder
+	{
+		@content;
+	}
+
+	&:-moz-placeholder
+	{
+		@content;
+	}
+
+	&::-moz-placeholder
+	{
+		@content;
+	}
+
+	&:-ms-input-placeholder
+	{
+		@content;
+	}
+}

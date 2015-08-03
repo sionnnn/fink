@@ -1,0 +1,18 @@
+/*
+Alt color
+
+alt-color()
+
+Styleguide 0.5.1
+*/
+
+@mixin alt-color()
+{
+	@if($alt-colour-classnamne)
+	{
+		.#{$alt-colour-classnamne} &
+		{
+			@content;
+		}
+	}
+}
