@@ -25,7 +25,12 @@ Styleguide 1.1
 @import "modules/functions/function.all";
 @import "modules/mixins/mixin.all";
 @import "modules/placeholders/core.placeholders";
-/**
+
+/*
+Elements
+
+Styleguide 0.3
+*/
 @import "modules/elements/elements.head";
 @import "modules/elements/elements.sections";
 @import "modules/elements/elements.links";
@@ -36,5 +41,14 @@ Styleguide 1.1
 @import "modules/elements/elements.embedded";
 @import "modules/elements/elements.interactive";
 @import "modules/elements/elements.forms";
-*/
+
 @import "modules/utility/core.utility";
+
+/*
+Susy grid system
+
+Source: http://susydocs.oddbird.net/en/latest/
+
+Styleguide 0.9
+*/
+@import "modules/susy/susy";

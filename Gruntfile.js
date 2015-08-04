@@ -29,11 +29,18 @@ module.exports = function(grunt) {
 		        expand: true
 		    },
 			scssmodules: {
-		        cwd: 'public/assets/components/dump/modules',
-		        src:['**/*'],
-				dest: 'src/scss/modules',
-		        expand: true
-		    }
+				files:[{
+			        cwd: 'public/assets/components/dump/modules',
+			        src:['**/*'],
+					dest: 'src/scss/modules',
+			        expand: true
+			    },{
+			        cwd: 'public/assets/components/susy/sass',
+			        src:['**/*'],
+					dest: 'src/scss/modules/susy',
+			        expand: true
+			    }]
+			}
 		},
 		/**
 		codestyle

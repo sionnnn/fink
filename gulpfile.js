@@ -4,7 +4,7 @@ var sass = require('gulp-sass');
 var pkg = require('./package.json');
 
 var outputPath = 'docs/styleguide',
-    source = 'src/scss/**/*.scss',
+    source = ['src/scss/**/*.scss','!src/scss/modules/susy/','!src/scss/modules/susy/**'],
     styleTitle = pkg.name + " " + pkg.version + ' styleguide';
 
 gulp.task('styleguide:generate', function() {
