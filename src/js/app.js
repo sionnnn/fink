@@ -1,9 +1,8 @@
 import {ExampleClass} from './modules/example';
 //use require to import jquery
-/*
-var $ = require('jquery');
+
+var $ = require('../../public/assets/components/jquery/dist/jquery.js');
 console.log($);
-*/
 
 let eg = new ExampleClass('babel eg');
 console.log(eg.echo('echo test'));

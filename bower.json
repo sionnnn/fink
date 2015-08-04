@@ -21,7 +21,8 @@
     "normalize.css": "~3.0.3"
   },
   "devDependencies": {
-    "susy": "~2.2.5"
+    "susy": "~2.2.5",
+    "jquery": "~2.1.4"
   },
   "overrides": {
     "dump": {
