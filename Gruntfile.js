@@ -13,18 +13,11 @@ module.exports = function(grunt) {
 		base
 		*/
 		connect :{
-			jsdoc: {
+			docs: {
 		        options: {
 		            port: 3001,
 					keepalive:false,
-		            base: './docs/jsdoc'
-		        }
-		    },
-			perf: {
-		        options: {
-		            port: 3002,
-					keepalive:false,
-		            base: './docs/performance'
+		            base: './docs'
 		        }
 		    },
 			server: {
@@ -500,10 +493,13 @@ module.exports = function(grunt) {
 				path: 'http://localhost:3000/'
 			},
 			jsdoc : {
-				path: 'http://localhost:3001/'
+				path: 'http://localhost:3001/jsdoc'
 			},
 			perf : {
-				path: 'http://localhost:3002/'
+				path: 'http://localhost:3001/performance'
+			},
+			sassdoc : {
+				path: 'http://localhost:3001/sassdoc'
 			}
 		},
 		concurrent: {

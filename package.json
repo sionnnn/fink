@@ -42,6 +42,7 @@
     "gulp-sass": "^2.0.4",
     "jit-grunt": "^0.9.1",
     "phantomas": "^1.11.0",
+    "sassdoc": "^2.1.15",
     "sc5-styleguide": "^0.3.26",
     "time-grunt": "^1.2.1",
     "webp-bin": "~0.1.4"
