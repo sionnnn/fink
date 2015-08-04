@@ -239,9 +239,7 @@ module.exports = function(grunt) {
 		postcss: {
 			options: {
 				map: true,
-				processors: [
-					require('autoprefixer-core')({browsers: ['last 1 version']})
-				]
+				processors: pcssprocessor
 			},
 			dist: {
 				src: 'public/assets/css/site.css'
