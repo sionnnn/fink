@@ -1,6 +1,7 @@
 docs/jsdoc
 docs/performance
 docs/styleguide
+docs/sassdoc
 node_modules
 public/assets
 public/*.html
