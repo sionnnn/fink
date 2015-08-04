@@ -1,6 +1,5 @@
 {
 	"pre_ops":{
-		"runOn":["build"],
 		"tasks":{
 			"bower-install-simple":true,
 			"modernizr":true,
@@ -8,7 +7,6 @@
 		}
 	},
 	"js":{
-		"runOn":["build"],
 		"tasks":{
 			"newer:browserify:babel":true,
 			"newer:jscs":true,
@@ -17,7 +15,6 @@
 		}
 	},
 	"css":{
-		"runOn":["build"],
 		"tasks":{
 			"sass":true,
 			"newer:sass-convert":true,
@@ -28,7 +25,6 @@
 		}
 	},
 	"html":{
-		"runOn":["build"],
 		"tasks":{
 			"newer:zetzer":true,
 			"wiredep":true,
@@ -38,7 +34,6 @@
 		}
 	},
 	"icons":{
-		"runOn":["build"],
 		"tasks":{
 			"real_favicon":true,
 			"svgmin:icons":true,
@@ -46,14 +41,12 @@
 		}
 	},
 	"images":{
-		"runOn":["build"],
 		"tasks":{
 			"newer:imagemin":true,
 			"newer:webp":true
 		}
 	},
 	"docs":{
-		"runOn":["build"],
 		"tasks":{
 			"newer:jsdoc":true,
 			"exec:styleguide":true,
