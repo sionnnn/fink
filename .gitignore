@@ -4,6 +4,7 @@ docs/styleguide
 docs/sassdoc
 node_modules
 public/
+src/scss/modules/**/
 lib
 
 # Windows image file caches
