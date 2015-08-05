@@ -5,7 +5,7 @@ var pkg = require('./package.json');
 var sassdoc = require('sassdoc');
 
 var outputPath = 'docs/styleguide',
-    source = ['src/scss/**/*.scss','!src/scss/modules/susy/','!src/scss/modules/susy/**'],
+    source = ['lib/components/**/*.scss','src/scss/**/*.scss','!lib/components/susy/','!lib/components/susy/**'],
     styleTitle = pkg.name + " " + pkg.version + ' styleguide';
 
 
