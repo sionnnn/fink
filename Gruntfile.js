@@ -395,9 +395,18 @@ module.exports = function(grunt) {
 					//'app/styles/main.scss',  // .scss & .sass support...
 					//'app/config.yml'         // and .yml & .yaml support out of the box!
 				],
+        		ignorePath: /..\/lib/,
 				options: {
 					devDependencies: false,
 					exclude: [ ]
+				},
+				fileTypes: {
+					html: {
+					  replace: {
+					    js: '<script src="assets{{filePath}}"></script>',
+					    css: '<link rel="stylesheet" href="assets{{filePath}}" />'
+					  }
+					}
 				}
 			}
 		},

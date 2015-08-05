@@ -3,7 +3,14 @@
 
 ###usage
 
+install ruby [http://rubyinstaller.org/downloads/](http://rubyinstaller.org/downloads/)
 ```shell
+gem install sass
+```
+
+```shell
+npm clean cache
+
 npm install
 ```
 
