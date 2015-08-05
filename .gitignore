@@ -3,8 +3,7 @@ docs/performance
 docs/styleguide
 docs/sassdoc
 node_modules
-public/assets
-public/*.html
+public/
 lib
 
 # Windows image file caches
