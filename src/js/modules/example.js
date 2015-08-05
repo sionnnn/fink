@@ -1,6 +1,6 @@
 /**
  * @class ExampleClass
- * @classdesc FINK definition example module
+ * @classdesc definition example module
  */
 class ExampleClass {
     /**
@@ -13,6 +13,7 @@ class ExampleClass {
     }
     /**
     * @memberOf ExampleClass
+    * @desc returns the same string as you pass to it :) 
     * @param {string} str
     * @returns {string}
     */

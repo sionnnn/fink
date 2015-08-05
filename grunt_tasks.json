@@ -48,9 +48,9 @@
 	},
 	"docs":{
 		"tasks":{
-			"newer:jsdoc":true,
+			"jsdoc":true,
 			"exec:styleguide":true,
-			"newer:phantomas":true
+			"phantomas":true
 		}
 	},
 	"watchers":["watch:css", 

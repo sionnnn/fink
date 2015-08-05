@@ -16,18 +16,25 @@
     "tests"
   ],
   "dependencies": {
-    "dump": "sionnnn/dump",
     "modernizr": "~2.8.3",
-    "normalize.css": "~3.0.3"
+    "jquery": "~2.1.4",
+    "hammerjs": "~2.0.4"
   },
   "devDependencies": {
-    "susy": "~2.2.5",
-    "jquery": "~2.1.4"
+    "js.ajax": "th-nk-modules/js.ajax",
+
+    "css.constants": "th-nk-modules/css.constants",
+    "css.defaults": "th-nk-modules/css.defaults",
+    "css.elements": "th-nk-modules/css.elements",
+    "css.functions": "th-nk-modules/css.functions",
+    "css.mixins": "th-nk-modules/css.mixins",
+    "css.normalize": "th-nk-modules/css.normalize",
+    "css.placeholders": "th-nk-modules/css.placeholders",
+    "css.utility": "th-nk-modules/css.utility",
+
+    "susy": "~2.2.5"
   },
   "overrides": {
-    "dump": {
-      "main": "dump.min.js"
-    },
     "modernizr": {
       "main": "modernizr-custom.js"
     }

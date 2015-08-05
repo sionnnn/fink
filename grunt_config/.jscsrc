@@ -7,7 +7,6 @@
   "disallowMultipleLineBreaks": true,
   "requireBlocksOnNewline": true,
   "disallowMixedSpacesAndTabs": true,
-  "disallowTrailingWhitespace": true,
   "requireLineFeedAtFileEnd": true,
   "requireSpacesInFunctionExpression": {
     "beforeOpeningCurlyBrace": true

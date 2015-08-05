@@ -1,7 +1,7 @@
 import {ExampleClass} from './modules/example';
-//use require to import jquery
+import {Ajax} from '../../lib/components/js.ajax/ajax';
+var $ = require('../../lib/components/jquery/dist/jquery.js');
 
-var $ = require('../../public/assets/components/jquery/dist/jquery.js');
 console.log($);
 
 let eg = new ExampleClass('babel eg');
@@ -14,4 +14,8 @@ worker.onmessage = function(e) {
 worker.onerror = function(e) {
 	console.log(e);
 };
-worker.postMessage({'value':'echo from babel test'});
+worker.postMessage({'value':'echo from babel test change'});
+
+var a = new Ajax();
+console.log(a);
+

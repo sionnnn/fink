@@ -1,9 +1,0 @@
-@function greyshade($integer: 4)
-{
-	@if($integer > 10)
-	{
-		$integer: 10;
-	}
-
-	@return lighten(#000000, (10 - $integer) * 10%);
-}

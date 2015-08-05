@@ -1,6 +1,6 @@
 /**
  * @class ExampleClass
- * @classdesc FINK definition example module
+ * @classdesc ????? definition example module
  */
 class ExampleClass {
     /**

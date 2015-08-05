@@ -277,8 +277,8 @@ module.exports = function(grunt) {
 		},
 		modernizr: {	    
 		    dist: {
-		        devFile : "./public/assets/components/modernizr/modernizr.js",
-		        outputFile : "./public/assets/components/modernizr/modernizr-custom.js",
+		        devFile : "./lib/components/modernizr/modernizr.js",
+		        outputFile : "./lib/components/modernizr/modernizr-custom.js",
 		        extra : {
 		            shiv : true,
 		            printshiv : false,
@@ -321,7 +321,7 @@ module.exports = function(grunt) {
 		          modules:"common"
 		        },
 		        files: {
-		           "./public/assets/js/app.js": ["./src/js/app.js"]
+		           "./public/assets/js/app.js": ["./src/js/**/*.js"]
 		        }
 		    }
 		},
@@ -330,7 +330,7 @@ module.exports = function(grunt) {
 		*/
 		jsdoc:{
 			dist : {
-		        src: ['public/assets/js/**/*'], 
+		        src: ['public/assets/js/**/*.js'], 
 		        options: {
 		            destination: 'docs/jsdoc'
 		        }
@@ -388,6 +388,7 @@ module.exports = function(grunt) {
 		*/
 		wiredep: {
 			task: {
+				directory: './lib/components',
 				src: [
 					'public/**/*.html',   // .html support...
 					//'app/views/**/*.jade',   // .jade support...
@@ -395,8 +396,8 @@ module.exports = function(grunt) {
 					//'app/config.yml'         // and .yml & .yaml support out of the box!
 				],
 				options: {
-					devDependencies: true,
-					exclude: [ 'dump' ]
+					devDependencies: false,
+					exclude: [ ]
 				}
 			}
 		},
@@ -425,7 +426,6 @@ module.exports = function(grunt) {
 		},
 		"bower-install-simple": {
 	        options: {
-	            directory: "public/assets/components"
 	        },
 	        dev: {
 	            options: {

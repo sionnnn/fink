@@ -1,7 +1,5 @@
 docs/jsdoc
 docs/performance
-docs/performance/**/
-docs/performance/**/*.*
 docs/styleguide
 docs/sassdoc
 node_modules
