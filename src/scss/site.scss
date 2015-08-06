@@ -32,6 +32,8 @@ Styleguide 1.1
 
 @import "./lib/components/susy/sass/susy";
 
+@import "modules/example";
+
 body {
     @include container(60em);
 }
