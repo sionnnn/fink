@@ -12,12 +12,6 @@ Site
 Styleguide 1.0
 */
 
-/*
-Imports
-
-Styleguide 1.1
-*/
-
 @import "./lib/components/css.normalize/generic.normalize";
 @import "./lib/components/css.constants/core.constants";
 @import "_vars";
@@ -29,11 +23,8 @@ Styleguide 1.1
 @import "./lib/components/css.elements/elements.all";
 @import "./lib/components/css.utility/core.utility";
 
-
 @import "./lib/components/susy/sass/susy";
 
-@import "modules/example";
-
 body {
-    @include container(60em);
+    @include container($site-width);
 }

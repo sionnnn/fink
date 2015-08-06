@@ -443,7 +443,7 @@ module.exports = function(grunt) {
 		},
 		watch:{
 			css:{
-				files: ['src/scss/**/*.scss'],
+				files: ['src/scss/**/*.scss','lib/components/**/*.scss'],
 			    tasks: ['sass'],
 			    options: {
 			      spawn: false,
