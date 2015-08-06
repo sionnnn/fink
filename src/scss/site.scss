@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 /*
-Base
+Core
 
 Styleguide 0.0
 */
@@ -26,21 +26,10 @@ Styleguide 1.1
 @import "./lib/components/css.mixins/mixin.all";
 @import "./lib/components/css.placeholders/core.placeholders";
 
-/*
-Elements
-
-Styleguide 0.3
-*/
 @import "./lib/components/css.elements/elements.all";
 @import "./lib/components/css.utility/core.utility";
 
-/*
-Susy grid system
 
-Source: http://susydocs.oddbird.net/en/latest/
-
-Styleguide 0.9
-*/
 @import "./lib/components/susy/sass/susy";
 
 body {

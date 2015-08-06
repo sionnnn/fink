@@ -21,7 +21,7 @@ gulp.task('styleguide:generate', function() {
 });
 
 gulp.task('styleguide:applystyles', function() {
-  return gulp.src('src/scss/site.scss')
+  return gulp.src(source)
     .pipe(sass({
       errLogToConsole: true
     }))
