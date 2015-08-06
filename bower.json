@@ -1,5 +1,5 @@
 {
-  "name": "F_NK",
+  "name": "TH_NK",
   "version": "0.1.0",
   "authors": [
     "sion evans <sionevans@gmail.com>"
@@ -27,6 +27,7 @@
 
     "css.constants": "th-nk-modules/css.constants",
     "css.defaults": "th-nk-modules/css.defaults",
+    "css.defaults": "th-nk-modules/css.typography",
     "css.elements": "th-nk-modules/css.elements",
     "css.functions": "th-nk-modules/css.functions",
     "css.mixins": "th-nk-modules/css.mixins",
