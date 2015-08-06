@@ -22,7 +22,9 @@
   },
   "devDependencies": {
     "jquery": "~2.1.4",
+
     "js.ajax": "th-nk-modules/js.ajax",
+
     "css.constants": "th-nk-modules/css.constants",
     "css.defaults": "th-nk-modules/css.defaults",
     "css.elements": "th-nk-modules/css.elements",
@@ -31,6 +33,7 @@
     "css.normalize": "th-nk-modules/css.normalize",
     "css.placeholders": "th-nk-modules/css.placeholders",
     "css.utility": "th-nk-modules/css.utility",
+
     "susy": "~2.2.5"
   },
   "overrides": {
