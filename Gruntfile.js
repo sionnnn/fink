@@ -7,6 +7,13 @@ module.exports = function(grunt) {
 	var webpbinpath = app_config.images.tasks["newer:webp"] ? require('webp-bin').path : "";//
 	var pcssprocessor = app_config.images.tasks["newer:postcss"] ? [require('autoprefixer-core')({browsers: ['last 1 version']})] : [];
 
+	var bower_json = grunt.file.readJSON('bower.json').dependencies;
+	var bower_deps = [];
+
+	for(key in bower_json){
+		bower_deps.push(key+"/**");
+	};
+
 	var conf = {
     	pkg: grunt.file.readJSON('package.json'),
 		/**
@@ -35,18 +42,8 @@ module.exports = function(grunt) {
 				dest: 'public/assets/js/webworkers',
 		        expand: true
 		    },
-			scssmodules: {
-				files:[{
-			        cwd: 'public/assets/components/dump/modules',
-			        src:['**/*'],
-					dest: 'src/scss/modules',
-			        expand: true
-			    },{
-			        cwd: 'public/assets/components/susy/sass',
-			        src:['**/*'],
-					dest: 'src/scss/modules/susy',
-			        expand: true
-			    }]
+			dependancies: {
+				files:[{expand: true, cwd:'lib/components/', src: bower_deps, dest: 'public/assets/components'}]
 			}
 		},
 		/**
@@ -390,10 +387,7 @@ module.exports = function(grunt) {
 			task: {
 				directory: './lib/components',
 				src: [
-					'public/**/*.html',   // .html support...
-					//'app/views/**/*.jade',   // .jade support...
-					//'app/styles/main.scss',  // .scss & .sass support...
-					//'app/config.yml'         // and .yml & .yaml support out of the box!
+					'public/**/*.html',
 				],
         		ignorePath: /..\/lib/,
 				options: {
