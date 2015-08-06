@@ -43,4 +43,6 @@ Styleguide 0.9
 */
 @import "./lib/components/susy/sass/susy";
 
-body { @include container(60em); }
+body {
+    @include container(60em);
+}

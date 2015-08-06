@@ -1,8 +1,8 @@
-{{= it.include("head", {title:it.title}) }}
+{{= it.include("head", {title:it.document.title}) }}
 <body>
 
 <header class="header" role="banner">
-	<h1>{{= it.title}}</h1>
+	<h1>{{= it.title}} {{= it.document.title}}</h1>
 </header>
 
 {{= it.document }}
