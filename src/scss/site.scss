@@ -42,3 +42,5 @@ Source: http://susydocs.oddbird.net/en/latest/
 Styleguide 0.9
 */
 @import "./lib/components/susy/sass/susy";
+
+body { @include container(60em); }
