@@ -27,7 +27,6 @@
 
     "css.constants": "th-nk-modules/css.constants",
     "css.defaults": "th-nk-modules/css.defaults",
-    "css.defaults": "th-nk-modules/css.typography",
     "css.elements": "th-nk-modules/css.elements",
     "css.functions": "th-nk-modules/css.functions",
     "css.mixins": "th-nk-modules/css.mixins",
