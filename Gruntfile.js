@@ -350,7 +350,7 @@ module.exports = function(grunt) {
 			prototype: {
 				options: {
 					env: {
-						title: "<%= pkg.name %> <%= pkg.version %> prototype",
+						title: "<%= pkg.name %> <%= pkg.version %>",
 						pageurl: "public"
 					},
 					partials: "src/html/partials",
@@ -458,7 +458,7 @@ module.exports = function(grunt) {
 			},
 			html:{
 				files: ['./src/html/**/*.html'],
-			    tasks: ['newer:zetzer'],
+			    tasks: ['zetzer'],
 			    options: {
 			      spawn: false,
 			    },
