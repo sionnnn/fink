@@ -1,6 +1,7 @@
 {
 	"pre_ops":{
 		"tasks":{
+			"clean":true,
 			"bower-install-simple":true,
 			"modernizr":true,
 			"copy":true

@@ -35,6 +35,9 @@ module.exports = function(grunt) {
 		        }
 		    }
 		},
+		clean: {
+			build: ['./docs','./lib','./public/assets/components'],
+		},
 		copy: {
 			webworkers: {
 		        cwd: 'src/js/webworkers',
