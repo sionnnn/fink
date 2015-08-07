@@ -47,6 +47,7 @@
 		}
 	},
 	"docs":{
+		"devonly":true,
 		"tasks":{
 			"jsdoc":true,
 			"exec:styleguide":true,

@@ -5,7 +5,10 @@ var pkg = require('./package.json');
 var sassdoc = require('sassdoc');
 
 var outputPath = 'docs/styleguide',
-    source = ['lib/components/**/*.scss','src/scss/**/*.scss','!lib/components/susy/','!lib/components/susy/**','public/assets/icons/icons.data.svg.css'],
+    source = ['lib/components/**/*.scss','src/scss/**/*.scss',
+              '!lib/components/susy/',
+              '!lib/components/susy/**',
+              'public/assets/icons/icons.data.svg.css'],
     styleTitle = pkg.name + " " + pkg.version + ' styleguide';
 
 
@@ -39,21 +42,6 @@ gulp.task('sassdoc', function () {
     (
       {
         dest: './docs/sassdoc'
-        /*
-        dest: 'docs',
-        verbose: true,
-        display: {
-          access: ['public', 'private'],
-          alias: true,
-          watermark: true,
-        },
-        groups: {
-          'undefined': 'Ungrouped',
-          foo: 'Foo group',
-          bar: 'Bar group',
-        },
-        basePath: 'https://github.com/SassDoc/sassdoc',
-        */
       }   
     )
   );

@@ -537,7 +537,8 @@ module.exports = function(grunt) {
 	allows for yeoman integration
 	*/
 	var config_tasks = {
-		"build":[]
+		"builddev":[],
+		"buildserver":[]
 	};
 	function _regsiterConfigTasks(name,section){
 		if(!!section){
@@ -551,7 +552,10 @@ module.exports = function(grunt) {
 
 			if(arr.length > 0) {
 				grunt.registerTask(name, arr);
-				config_tasks["build"].push(name);
+				config_tasks["builddev"].push(name);
+				if(!section["devonly"]) {
+					config_tasks["buildserver"].push(name);
+				}
 			}
 		};
 	};
@@ -567,6 +571,7 @@ module.exports = function(grunt) {
 	*/
     grunt.loadNpmTasks("grunt-asset-cachebuster");
 
-    grunt.registerTask('build', config_tasks['build']);
-    grunt.registerTask('default', ['build','connect','open','concurrent:watch']);
+    grunt.registerTask('builddev', config_tasks['builddev']);
+    grunt.registerTask('buildserver', config_tasks['buildserver']);
+    grunt.registerTask('default', ['builddev','connect','open','concurrent:watch']);
 };
