@@ -53,6 +53,11 @@
 			"phantomas":true
 		}
 	},
+	"tests":{
+		"tasks":{
+			"phantomcss":true
+		}
+	},
 	"watchers":["watch:css", 
 				"watch:js", 
 				"watch:html",

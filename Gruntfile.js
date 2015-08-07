@@ -113,6 +113,9 @@ module.exports = function(grunt) {
 				}]
 		    }
 		},
+		/**
+		images
+		*/
 		webp: {
 	        dynamic: {
 	            files: [{
@@ -209,6 +212,19 @@ module.exports = function(grunt) {
 		    html: {
 		        src: ['public/**/*.html']
 		    }
+		},
+		phantomcss:{
+			test: {
+				options: {
+					screenshots: './test/cssregression/baselines',
+					results: './test/cssregression/results',
+					viewportSize: [1280, 800],
+					mismatchTolerance: 0.05
+				},
+				src: [
+					'test/cssregression/phantomcss.js'
+				]
+			}
 		},
 		/**
 		css
