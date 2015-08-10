@@ -48,5 +48,8 @@
     "sc5-styleguide": "^0.3.26",
     "time-grunt": "^1.2.1",
     "webp-bin": "^0.1.4"
+  },
+  "dependencies": {
+    "grunt-phantomcss": "git://github.com/anselmh/grunt-phantomcss.git"
   }
 }
