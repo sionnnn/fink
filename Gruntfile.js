@@ -47,6 +47,9 @@ module.exports = function(grunt) {
 		    },
 			dependancies: {
 				files:[{expand: true, cwd:'lib/components/', src: bower_deps, dest: 'public/assets/components'}]
+			},
+			styleguide: {
+				files:[{expand: true, cwd:'public/assets/', src: ['js/**','icons/**'], dest: 'docs/styleguide/assets'}]
 			}
 		},
 		/**
@@ -273,23 +276,32 @@ module.exports = function(grunt) {
     		}
 		},
 		stripmq: {
-			options: {
-				// Include only styles for a screen 800px wide
-				width: 1024,
-				type: 'screen',
-				//'device-width': int
-				//height: int,
-				//'device-height': int,
-				//resolution: '1dppx',
-				//orientation : 'landscape',
-				//'aspect-ratio' : int
-				//color
-			},
-			all: {
+			legacy:{
+				options: {
+					// Include only styles for a screen 800px wide
+					width: 1024,
+					type: 'screen',
+					//'device-width': int
+					//height: int,
+					//'device-height': int,
+					//resolution: '1dppx',
+					//orientation : 'landscape',
+					//'aspect-ratio' : int
+					//color
+				},
 				files: {
 					'public/assets/css/site.legacy.css': 'public/assets/css/site.css'
 				}
 			},
+			mobile:{
+				options: {
+					width: 600,
+					type: 'screen'
+				},
+				files: {
+					'public/assets/css/site.mobile.css': 'public/assets/css/site.css'
+				}
+			}
 		},
 		modernizr: {	    
 		    dist: {
@@ -337,7 +349,7 @@ module.exports = function(grunt) {
 		          modules:"common"
 		        },
 		        files: {
-		           "./public/assets/js/app.js": ["./src/js/**/*.js"]
+		           "./public/assets/js/app.js": ["./src/js/**/*.js","./src/js/**/!*.test.js"]
 		        }
 		    }
 		},

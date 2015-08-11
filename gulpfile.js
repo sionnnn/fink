@@ -17,6 +17,9 @@ gulp.task('styleguide:generate', function() {
     .pipe(styleguide.generate({
         title: styleTitle,
         server: true,
+        extraHead: [
+            '<script src="assets/js/app.js"></script>'
+        ],
         rootPath: outputPath,
         overviewPath: 'docs/overview.md'
       }))
