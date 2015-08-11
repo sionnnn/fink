@@ -57,7 +57,8 @@
 	},
 	"tests":{
 		"tasks":{
-			"phantomcss":true
+			"phantomcss":true,
+			"karma":true
 		}
 	},
 	"watchers":["watch:css", 

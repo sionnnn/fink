@@ -38,6 +38,13 @@ module.exports = function(grunt) {
 		clean: {
 			build: ['./docs','./lib','./public/assets/components'],
 		},
+		karma: {
+            unit: {
+                configFile: 'grunt_config/karma.conf.js',
+                singleRun: true,
+                reporters: ['progress'] //continuousIntegrationMode ? ['teamcity'] : ['progress']
+            }
+        },
 		copy: {
 			webworkers: {
 		        cwd: 'src/js/webworkers',
