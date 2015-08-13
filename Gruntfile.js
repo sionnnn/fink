@@ -56,7 +56,7 @@ module.exports = function(grunt) {
 				files:[{expand: true, cwd:'lib/components/', src: bower_deps, dest: 'public/assets/components'}]
 			},
 			styleguide: {
-				files:[{expand: true, cwd:'public/assets/', src: ['js/**','icons/**'], dest: 'docs/styleguide/assets'}]
+				files:[{expand: true, cwd:'public/assets/', src: ['js/styleguide.js','icons/**'], dest: 'docs/styleguide/section/assets'}]
 			}
 		},
 		/**
@@ -355,9 +355,12 @@ module.exports = function(grunt) {
 		           ],
 		          modules:"common"
 		        },
-		        files: {
-		           "./public/assets/js/app.js": ["./src/js/**/*.js","./src/js/**/!*.test.js"]
-		        }
+		        files: [{
+		           "./public/assets/js/app.js": ["./src/js/**/*.js","!./src/js/**/*.test.js"]
+		        },
+				{
+		           "./public/assets/js/stylguide.js": ["./src/js/styleguide.js"]
+		        }]
 		    }
 		},
 		/**
@@ -365,7 +368,7 @@ module.exports = function(grunt) {
 		*/
 		jsdoc:{
 			dist : {
-		        src: ['public/assets/js/**/*.js'], 
+		        src: ['public/assets/js/app.js'], 
 		        options: {
 		            destination: 'docs/jsdoc'
 		        }

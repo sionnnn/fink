@@ -1,10 +1,10 @@
-import {ExampleClass} from './modules/example';
+import * as app from './app';
 
-describe('Example tests', function() {
+describe('tests', function() {
 
     it('Make sure things work', function() {
-        var result = new ExampleClass('example').echo('test');
-        expect(result).toBe('example test');
+        var result = 'test';
+        expect(result).toBe('test');
     });
  
 });

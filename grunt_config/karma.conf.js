@@ -8,7 +8,7 @@ module.exports = function(config) {
         frameworks: ['browserify', 'jasmine'],
 
         files: [
-            'src/js/**/*.js'
+            'src/js/**/*.js','lib/components/js.ajax/*.js'
         ],
 
         exclude: [
@@ -31,7 +31,8 @@ module.exports = function(config) {
         singleRun: false,
 
         preprocessors: {
-            'src/js/**/*.js': ['browserify']
+            'src/js/**/*.js': ['browserify'],
+            'lib/components/js.ajax/*.js' : ['browserify']
         },
 
         browserify: {
