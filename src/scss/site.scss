@@ -28,6 +28,7 @@ Styleguide 1.0
 
 @import "./lib/components/pkg.collapse/collapse";
 
-body {
+//needs attention
+.page__body {
     @include container($site-width);
 }
