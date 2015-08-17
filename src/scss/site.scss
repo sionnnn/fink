@@ -20,12 +20,9 @@ Styleguide 1.0
 @import "./lib/components/css.functions/function.all";
 @import "./lib/components/css.mixins/mixin.all";
 @import "./lib/components/css.placeholders/core.placeholders";
-
 @import "./lib/components/css.elements/elements.all";
 @import "./lib/components/css.utility/core.utility";
-
 @import "./lib/components/susy/sass/susy";
-
 @import "./lib/components/pkg.collapse/collapse";
 
 body {
