@@ -39,6 +39,7 @@
     "susy": "~2.2.5",
 
     "pkg.collapse": "th-nk-modules/pkg.collapse",
+    "pkg.mobilenav": "th-nk-modules/pkg.mobilenav",
 
     "animate.css-scss": "geoffgraham/animate.scss"
   },
