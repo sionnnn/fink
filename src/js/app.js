@@ -1,4 +1,5 @@
 import {Collapse} from '../../lib/components/pkg.collapse/collapse';
+import {MobileNav} from '../../lib/components/pkg.mobilenav/mobilenav';
 import {Ajax} from '../../lib/components/js.ajax/ajax';
 
 /*
@@ -25,3 +26,12 @@ var init = function() {
 }
 
 window.onload = init;
+
+/* example use of mobile nav */
+let menu = document.getElementsByClassName('page__nav');
+if(menu.length > 0){
+	for(let m = 0; m < menu.length; m++){
+		let nav = new MobileNav(menu[m])
+	}
+	
+}

@@ -27,6 +27,7 @@
     "js.ajax": "th-nk-modules/js.ajax",
     "js.dom": "th-nk-modules/js.dom",
     "js.events": "th-nk-modules/js.events",
+    "js.helpers": "th-nk-modules/js.helpers",
 
     "css.constants": "th-nk-modules/css.constants",
     "css.defaults": "th-nk-modules/css.defaults",
@@ -39,6 +40,7 @@
     "susy": "~2.2.5",
 
     "pkg.collapse": "th-nk-modules/pkg.collapse",
+    "pkg.mobilenav": "th-nk-modules/pkg.mobilenav",
 
     "animate.css-scss": "geoffgraham/animate.scss"
   },
