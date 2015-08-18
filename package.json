@@ -4,6 +4,7 @@
   "devDependencies": {
     "babelify": "^6.1.0",
     "bower": "^1.2.12",
+    "browserify": "^11.0.1",
     "grunt": "~0.4.1",
     "grunt-asset-cachebuster": "^0.3.1",
     "grunt-babel": "^5.0.1",
@@ -43,6 +44,7 @@
     "grunt-zetzer": "^2.0.0",
     "gulp": "^3.9.0",
     "gulp-sass": "^2.0.4",
+    "gulp-sourcemaps": "^1.5.2",
     "jit-grunt": "^0.9.1",
     "karma": "~0.10.9",
     "karma-babel-preprocessor": "^5.2.1",
@@ -60,6 +62,9 @@
     "sassdoc": "^2.1.15",
     "sc5-styleguide": "^0.3.26",
     "time-grunt": "^1.2.1",
+    "vinyl-buffer": "^1.0.0",
+    "vinyl-source-stream": "^1.1.0",
+    "watchify": "^3.3.1",
     "webp-bin": "^0.1.4"
   }
 }
