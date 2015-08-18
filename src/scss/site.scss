@@ -25,6 +25,6 @@ Styleguide 1.0
 @import "./lib/components/susy/sass/susy";
 @import "./lib/components/pkg.collapse/collapse";
 
-body {
+.page__body {
     @include container($site-width);
 }
