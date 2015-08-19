@@ -31,8 +31,8 @@ module.exports = function(config) {
         singleRun: true,
 
         preprocessors: {
-            'src/js/**/*.js': ['browserify']/*,
-            'lib/components/js.ajax/*.js' : ['browserify']*/
+            'src/js/**/*.js': ['browserify'],
+            'lib/components/js.ajax/*.js' : ['browserify']
         },
 
         browserify: {
