@@ -355,11 +355,11 @@ module.exports = function(grunt) {
 		           ],
 		          modules:"common"
 		        },
-		        files: [{
-		           "./public/assets/js/app.js": ["./src/js/**/*.js","!./src/js/**/*.test.js"]
-		        },
+		        files: [/*{
+		           "./public/assets/js/app.js": ["./src/js/app.js"]
+		        },*/
 				{
-		           "./public/assets/js/stylguide.js": ["./src/js/styleguide.js"]
+		           "./docs/styleguide/section/assets/js/stylguide.js": ["./src/js/styleguide.js"]
 		        }]
 		    }
 		},
@@ -480,6 +480,9 @@ module.exports = function(grunt) {
 		exec: {
 			styleguide: {
 				command: 'start gulp watch &'
+			},
+			js: {
+				command: 'start gulp watchjs &'
 			}
 		},
 		watch:{
@@ -491,8 +494,8 @@ module.exports = function(grunt) {
 			    },
 			},
 			js:{
-				files: ['./src/js/**/*.js'],
-			    tasks: ['newer:browserify:babel'],
+				files: ['./src/js/styleguide.js'],
+			    tasks: ['browserify:babel'],
 			    options: {
 			      spawn: false,
 			    },

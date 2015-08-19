@@ -8,7 +8,7 @@ module.exports = function(config) {
         frameworks: ['browserify', 'jasmine'],
 
         files: [
-            'src/js/**/*.js','lib/components/js.ajax/*.js'
+            'src/js/**/*.test.js'//,'lib/components/js.ajax/*.js'
         ],
 
         exclude: [
@@ -31,13 +31,13 @@ module.exports = function(config) {
         singleRun: false,
 
         preprocessors: {
-            'src/js/**/*.js': ['browserify'],
-            'lib/components/js.ajax/*.js' : ['browserify']
+            'src/js/**/*.js': ['browserify']/*,
+            'lib/components/js.ajax/*.js' : ['browserify']*/
         },
 
         browserify: {
             debug: true,
-            transform: [ 'babelify' ]
+            transform: ['babelify']
         },
     });
 };
