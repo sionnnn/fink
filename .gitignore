@@ -6,6 +6,7 @@ node_modules
 public/
 src/scss/modules/**/
 lib
+test/unit_tests
 
 # Windows image file caches
 Thumbs.db

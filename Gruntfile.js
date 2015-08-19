@@ -40,9 +40,9 @@ module.exports = function(grunt) {
 		},
 		karma: {
             unit: {
-                configFile: 'grunt_config/karma.conf.js',
-                singleRun: true,
-                reporters: ['progress'] //continuousIntegrationMode ? ['teamcity'] : ['progress']
+                configFile: 'grunt_config/karma.conf.js'
+                /*singleRun: true,
+                reporters: ['progress'] //continuousIntegrationMode ? ['teamcity'] : ['progress']*/
             }
         },
 		copy: {
