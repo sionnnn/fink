@@ -8,10 +8,6 @@
 {{= it.document }}
 
 <aside class="sidebar" role="complementary">
-	<div id="databound">
-		<input rv-value="data.title" style="margin-top:1em;width:10em;" />
-		<p>{ data.title }</p>
-	</div>
 </aside>
 
 <footer class="footer" role="contentinfo">
@@ -26,10 +22,13 @@
 <!-- ... -->
 
 <script>
-rivets.bind(
-	document.getElementById('databound'), 
-	{data: window.data}
-);
+var db = document.getElementById('databound');
+if(db){
+	rivets.bind(
+		db, 
+		{data: window.data}
+	);
+}
 </script>
 
 </body>

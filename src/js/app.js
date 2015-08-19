@@ -1,7 +1,8 @@
 import {Collapse} from '../../lib/components/pkg.collapse/collapse';
 import {MobileNav} from '../../lib/components/pkg.mobilenav/mobilenav';
 import {Ajax} from '../../lib/components/js.ajax/ajax';
-import {events} from '../../lib/components/js.events/events';
+import {Tooltips} from '../../lib/components/pkg.tooltip/tooltip';
+
 /*
 var $ = require('../../lib/components/jquery/dist/jquery.js');
 console.log($);
@@ -14,7 +15,7 @@ worker.onmessage = function(e) {
 worker.onerror = function(e) {
 	//console.log(e);
 };
-worker.postMessage({'value':'echo from babel'});
+worker.postMessage({'value':'echo from babel testing 123'});
 
 window.data = {
 	title: 'data binding'
@@ -23,15 +24,16 @@ window.data = {
 var init = function() {
 	var collapse = new Collapse('click');
 	var ajax = new Ajax();
+	var tooltips = new Tooltips();
+	let a = 2;
 }
 
 window.onload = init;
 
 /* example use of mobile nav */
 let menu = document.getElementsByClassName('page__nav');
-if(menu.length > 0){
-	for(let m = 0; m < menu.length; m++){
+if (menu.length > 0){
+	for (let m = 0; m < menu.length; m++){
 		let nav = new MobileNav(menu[m])
 	}
-	
 }

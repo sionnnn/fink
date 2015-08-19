@@ -4,6 +4,7 @@
   "devDependencies": {
     "babelify": "^6.1.0",
     "bower": "^1.2.12",
+    "browserify": "^11.0.1",
     "grunt": "~0.4.1",
     "grunt-asset-cachebuster": "^0.3.1",
     "grunt-babel": "^5.0.1",
@@ -42,7 +43,9 @@
     "grunt-wiredep": "^2.0.0",
     "grunt-zetzer": "^2.0.0",
     "gulp": "^3.9.0",
+    "gulp-babel": "^5.2.0",
     "gulp-sass": "^2.0.4",
+    "gulp-sourcemaps": "^1.5.2",
     "jit-grunt": "^0.9.1",
     "karma": "~0.10.9",
     "karma-babel-preprocessor": "^5.2.1",
@@ -55,11 +58,15 @@
     "karma-sauce-launcher": "~0.1.8",
     "karma-script-launcher": "~0.1.0",
     "karma-story-reporter": "~0.2.2",
+    "karma-htmlfile-reporter": "~0.2",
     "phantomas": "^1.11.0",
     "phantomjs": "1.9.7-14",
     "sassdoc": "^2.1.15",
     "sc5-styleguide": "^0.3.26",
     "time-grunt": "^1.2.1",
+    "vinyl-buffer": "^1.0.0",
+    "vinyl-source-stream": "^1.1.0",
+    "watchify": "^3.3.1",
     "webp-bin": "^0.1.4"
   }
 }

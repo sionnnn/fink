@@ -21,7 +21,7 @@ gulp.task('styleguide:generate', function() {
         disableEncapsulation:false,
         server: true,
         extraHead: [
-            '<script src="assets/js/styleguide.js"></script>'
+            '<script src="section/assets/js/styleguide.js"></script>'
         ],
         rootPath: outputPath,
         overviewPath: 'docs/overview.md'
@@ -51,6 +51,32 @@ gulp.task('sassdoc', function () {
       }   
     )
   );
+});
+
+var babel = require("gulp-babel");
+var babelify = require('babelify');
+var browserify = require('browserify');
+var ss = require('vinyl-source-stream');
+var jssource = ["./src/js/**/*.js", "!./src/js/**/*.test.js"];
+
+gulp.task("jsbabel", function () {
+  return gulp.src(jssource)
+    .pipe(babel())
+    .pipe(gulp.dest("src/_compiled"));
+});
+gulp.task("watchjs", function(){
+    gulp.watch(jssource, ['jsbabel','modules']);
+});
+
+gulp.task('modules', function() {
+    browserify({
+      entries: 'src/_compiled/app.js',
+      debug: true
+    })
+    .transform(babelify)
+    .bundle()
+    .pipe(ss('app.js')) //output file name
+    .pipe(gulp.dest('./public/assets/js'));
 });
 
 gulp.task('styleguide', ['styleguide:generate', 'styleguide:applystyles', 'sassdoc']);

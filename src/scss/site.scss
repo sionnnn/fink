@@ -1,15 +1,27 @@
 @charset "UTF-8";
 
 /*
-Core
+css.core
 
 Styleguide 0.0
 */
 
 /*
-Site
+css.package
 
 Styleguide 1.0
+*/
+
+/*
+pkg.package
+
+Styleguide 2.0
+*/
+
+/*
+site.defaults
+
+Styleguide 3.0
 */
 
 @import "./lib/components/css.normalize/generic.normalize";
@@ -20,16 +32,13 @@ Styleguide 1.0
 @import "./lib/components/css.functions/function.all";
 @import "./lib/components/css.mixins/mixin.all";
 @import "./lib/components/css.placeholders/core.placeholders";
-
 @import "./lib/components/css.elements/elements.all";
 @import "./lib/components/css.utility/core.utility";
-
 @import "./lib/components/susy/sass/susy";
-
 @import "./lib/components/pkg.collapse/collapse";
 @import "./lib/components/pkg.mobilenav/mobilenav";
+@import "./lib/components/pkg.tooltip/tooltip";
 
-//needs attention
 .page__body {
     @include container($site-width);
 }

@@ -9,7 +9,8 @@
 	},
 	"js":{
 		"tasks":{
-			"newer:browserify:babel":true,
+			"exec:js":true,
+			"browserify:babel":true,
 			"newer:jscs":true,
 			"newer:eslint":true,
 			"newer:uglify":true
@@ -62,7 +63,7 @@
 		}
 	},
 	"watchers":["watch:css", 
-				"watch:js", 
+				"watch:js",
 				"watch:html",
 				"watch:deps",
 				"watch:favicon",
