@@ -8,13 +8,13 @@ module.exports = function(config) {
         frameworks: ['browserify', 'jasmine'],
 
         files: [
-            'src/js/**/*.test.js'//,'lib/components/js.ajax/*.js'
+            'src/js/**/*.test.js', 'lib/components/**/*.test.js'
         ],
 
         exclude: [
         ],
 
-        reporters: ['progress'],
+        reporters: ['progress','html'],
         port: 9876,
         // enable / disable colors in the output (reporters and logs)
         colors: true,
@@ -28,7 +28,7 @@ module.exports = function(config) {
         captureTimeout: 60000,
         // Continuous Integration mode
         // if true, it capture browsers, run tests and exit
-        singleRun: false,
+        singleRun: true,
 
         preprocessors: {
             'src/js/**/*.js': ['browserify']/*,
@@ -39,5 +39,9 @@ module.exports = function(config) {
             debug: true,
             transform: ['babelify']
         },
+        
+        htmlReporter: {
+            outputFile: 'test/unit_tests/'+new Date().getTime()+'.html'
+        }
     });
 };
