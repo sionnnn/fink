@@ -8,6 +8,8 @@ var _libComponentsJsAjaxAjax = require('../../lib/components/js.ajax/ajax');
 
 var _libComponentsPkgTooltipTooltip = require('../../lib/components/pkg.tooltip/tooltip');
 
+var _modulesCarousel = require('./modules/carousel');
+
 /*
 var $ = require('../../lib/components/jquery/dist/jquery.js');
 console.log($);
@@ -30,7 +32,7 @@ var init = function init() {
 	var collapse = new _libComponentsPkgCollapseCollapse.Collapse('click');
 	var ajax = new _libComponentsJsAjaxAjax.Ajax();
 	var tooltips = new _libComponentsPkgTooltipTooltip.Tooltips();
-	var a = 2;
+	var carousel = new _modulesCarousel.Carousel();
 };
 
 window.onload = init;

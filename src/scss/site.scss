@@ -39,11 +39,14 @@ Styleguide 3.0
 @import "./lib/components/pkg.mobilenav/mobilenav";
 @import "./lib/components/pkg.tooltip/tooltip";
 
+@import "./modules/carousel";
+
 @media (max-width: 400px) {
-	.btn {
-		background:pink!important;
-	}
+    .btn {
+        background: pink !important;
+    }
 }
+
 .page__body {
     @include container($site-width);
 }

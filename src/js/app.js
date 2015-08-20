@@ -2,6 +2,7 @@ import {Collapse} from '../../lib/components/pkg.collapse/collapse';
 import {MobileNav} from '../../lib/components/pkg.mobilenav/mobilenav';
 import {Ajax} from '../../lib/components/js.ajax/ajax';
 import {Tooltips} from '../../lib/components/pkg.tooltip/tooltip';
+import {Carousel,Carouselle} from './modules/carousel';
 
 /*
 var $ = require('../../lib/components/jquery/dist/jquery.js');
@@ -25,7 +26,7 @@ var init = function() {
 	var collapse = new Collapse('click');
 	var ajax = new Ajax();
 	var tooltips = new Tooltips();
-	let a = 2;
+	var carousel = new Carousel();
 }
 
 window.onload = init;
