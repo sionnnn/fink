@@ -42,6 +42,7 @@
     "pkg.collapse": "th-nk-modules/pkg.collapse",
     "pkg.mobilenav": "th-nk-modules/pkg.mobilenav",
     "pkg.tooltip": "th-nk-modules/pkg.tooltip",
+    "pkg.tabs": "th-nk-modules/pkg.tabs",
 
     "animate.css-scss": "geoffgraham/animate.scss"
   },
