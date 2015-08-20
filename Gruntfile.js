@@ -231,7 +231,6 @@ module.exports = function(grunt) {
 				options: {
 					screenshots: './test/cssregression/baselines',
 					results: './test/cssregression/results',
-					viewportSize: [1280, 800],
 					mismatchTolerance: 0.05
 				},
 				src: [
