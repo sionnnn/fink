@@ -21,7 +21,7 @@ gulp.task('styleguide:generate', function() {
         disableEncapsulation:false,
         server: true,
         extraHead: [
-            '<script src="section/assets/js/styleguide.js"></script>'
+            '<script src="/section/assets/js/styleguide.js"></script>'
         ],
         rootPath: outputPath,
         overviewPath: 'docs/overview.md'

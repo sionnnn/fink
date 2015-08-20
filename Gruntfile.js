@@ -358,7 +358,7 @@ module.exports = function(grunt) {
 		           "./public/assets/js/app.js": ["./src/js/app.js"]
 		        },*/
 				{
-		           "./docs/styleguide/section/assets/js/stylguide.js": ["./src/js/styleguide.js"]
+		           "./docs/styleguide/section/assets/js/styleguide.js": ["./src/js/styleguide.js"]
 		        }]
 		    }
 		},
@@ -603,5 +603,6 @@ module.exports = function(grunt) {
 
     grunt.registerTask('builddev', config_tasks['builddev']);
     grunt.registerTask('buildserver', config_tasks['buildserver']);
+    grunt.registerTask('conn', ['connect','open','concurrent:watch'])
     grunt.registerTask('default', ['builddev','exec:importmodules','connect','open','concurrent:watch']);
 };
