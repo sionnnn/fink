@@ -8,7 +8,9 @@ module.exports = function(config) {
         frameworks: ['browserify', 'jasmine'],
 
         files: [
-            'src/js/**/*.test.js', 'lib/components/**/*.test.js'
+            'src/js/**/*.test.js', 
+            'lib/components/**/*.test.js',
+            'public/assets/css/site.css',
         ],
 
         exclude: [
@@ -23,7 +25,7 @@ module.exports = function(config) {
         logLevel: config.LOG_INFO,
         // enable / disable watching file and executing tests whenever any file changes
         autoWatch: true,
-        browsers: ['PhantomJS'],
+        browsers: ['Chrome',/*'PhantomJS'*/],
         // If browser does not capture in given timeout [ms], kill it
         captureTimeout: 60000,
         // Continuous Integration mode
@@ -32,7 +34,8 @@ module.exports = function(config) {
 
         preprocessors: {
             'src/js/**/*.js': ['browserify'],
-            'lib/components/js.ajax/*.js' : ['browserify']
+            'lib/components/**/*.test.js' : ['browserify'],
+             'src/js/**/*.test.js' : ['browserify']
         },
 
         browserify: {
