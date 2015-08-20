@@ -482,6 +482,9 @@ module.exports = function(grunt) {
 			},
 			js: {
 				command: 'start gulp watchjs &'
+			},
+			importmodules: {
+				command: 'node importmodules.js'
 			}
 		},
 		watch:{
@@ -600,5 +603,5 @@ module.exports = function(grunt) {
 
     grunt.registerTask('builddev', config_tasks['builddev']);
     grunt.registerTask('buildserver', config_tasks['buildserver']);
-    grunt.registerTask('default', ['builddev','connect','open','concurrent:watch']);
+    grunt.registerTask('default', ['builddev','exec:importmodules','connect','open','concurrent:watch']);
 };
