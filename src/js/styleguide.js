@@ -11,7 +11,8 @@ window.addEventListener('styleguide:onRendered', function() {
 		
 		for (var m = 0; m < menu.length; m++){
 			var nav = new MobileNav(menu[m], document.querySelectorAll('html /deep/ .page__nav-show'))
-			nav.page = document.querySelectorAll('html /deep/ .page')
+			nav.page = document.querySelectorAll('html /deep/ .page')[0];
+
 		}
 	}
 

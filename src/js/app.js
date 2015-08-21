@@ -35,6 +35,6 @@ window.onload = init;
 let menu = document.getElementsByClassName('page__nav');
 if (menu.length > 0){
 	for (let m = 0; m < menu.length; m++){
-		let nav = new MobileNav(menu[m])
+		let nav = new MobileNav(menu[m], document.getElementsByClassName('page__nav-show'))
 	}
 }
