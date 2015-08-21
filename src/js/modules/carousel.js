@@ -6,7 +6,6 @@
 * @global
 */
 
-
 class Carousel {
     /**
      * @constructor
@@ -32,16 +31,16 @@ class Carousel {
 		this.init();
 	}
 
-	init(){
+	init() {
 		let elems = document.querySelectorAll('.carousel');
 
-		for(var i =0, il = elems.length; i <il; i++) {
+		for (var i =0, il = elems.length; i <il; i++) {
 			console.log('array init')
 			this.carousels.push(new Carouselle());
 		};
 	}
 
-	pageWidth(){
+	pageWidth() {
 		return this.pageWidth;
 	}
 }
@@ -60,13 +59,13 @@ class Carouselle extends Carousel {
 		*/
 	}
 
-	init(){
+	init() {
 		console.log('Carouselle init')
 		//return new Carouselle();
 	}
 
-	setWidth(){
-		return "setWidth";
+	setWidth() {
+		return 'setWidth';
 	}
 }
 
