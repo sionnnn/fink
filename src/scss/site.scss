@@ -39,9 +39,7 @@ Styleguide 3.0
 @import "./lib/components/pkg.mobilenav/mobilenav";
 @import "./lib/components/pkg.tooltip/tooltip";
 @import "./lib/components/pkg.tabs/tabs";
-
-
-@import "./modules/carousel";
+@import "./lib/components/pkg.carousel/carousel";
 
 @media (max-width: 400px) {
     .btn {

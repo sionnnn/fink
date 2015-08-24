@@ -2,7 +2,7 @@ import {Collapse} from '../../lib/components/pkg.collapse/collapse';
 import {MobileNav} from '../../lib/components/pkg.mobilenav/mobilenav';
 import {Ajax} from '../../lib/components/js.ajax/ajax';
 import {Tooltips} from '../../lib/components/pkg.tooltip/tooltip';
-import {Carousel,Carouselle} from './modules/carousel';
+import {Carousel,Carouselle} from '../../lib/components/pkg.carousel/carousel';
 
 /*
 var $ = require('../../lib/components/jquery/dist/jquery.js');
@@ -16,7 +16,7 @@ worker.onmessage = function(e) {
 worker.onerror = function(e) {
 	//console.log(e);
 };
-worker.postMessage({'value':'echo from babel testing 123'});
+worker.postMessage({'value':'echo from babel testing'});
 
 window.data = {
 	title: 'data binding'
@@ -25,8 +25,8 @@ window.data = {
 var init = function() {
 	var collapse = new Collapse('click');
 	var ajax = new Ajax();
-	var tooltips = new Tooltips();
 	var carousel = new Carousel();
+	var tooltips = new Tooltips();
 }
 
 window.onload = init;

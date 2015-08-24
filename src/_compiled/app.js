@@ -8,7 +8,7 @@ var _libComponentsJsAjaxAjax = require('../../lib/components/js.ajax/ajax');
 
 var _libComponentsPkgTooltipTooltip = require('../../lib/components/pkg.tooltip/tooltip');
 
-var _modulesCarousel = require('./modules/carousel');
+var _libComponentsPkgCarouselCarousel = require('../../lib/components/pkg.carousel/carousel');
 
 /*
 var $ = require('../../lib/components/jquery/dist/jquery.js');
@@ -22,7 +22,7 @@ worker.onmessage = function (e) {
 worker.onerror = function (e) {
 	//console.log(e);
 };
-worker.postMessage({ 'value': 'echo from babel testing 123' });
+worker.postMessage({ 'value': 'echo from babel testing' });
 
 window.data = {
 	title: 'data binding'
@@ -31,8 +31,8 @@ window.data = {
 var init = function init() {
 	var collapse = new _libComponentsPkgCollapseCollapse.Collapse('click');
 	var ajax = new _libComponentsJsAjaxAjax.Ajax();
+	var carousel = new _libComponentsPkgCarouselCarousel.Carousel();
 	var tooltips = new _libComponentsPkgTooltipTooltip.Tooltips();
-	var carousel = new _modulesCarousel.Carousel();
 };
 
 window.onload = init;
