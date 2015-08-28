@@ -10,6 +10,8 @@ var _libComponentsPkgTooltipTooltip = require('../../lib/components/pkg.tooltip/
 
 var _libComponentsPkgCarouselCarousel = require('../../lib/components/pkg.carousel/carousel');
 
+var _libComponentsPkgModalModal = require('../../lib/components/pkg.modal/modal');
+
 /*
 var $ = require('../../lib/components/jquery/dist/jquery.js');
 console.log($);
@@ -31,16 +33,24 @@ window.data = {
 var init = function init() {
 	var collapse = new _libComponentsPkgCollapseCollapse.Collapse('click');
 	var ajax = new _libComponentsJsAjaxAjax.Ajax();
-	var carousel = new _libComponentsPkgCarouselCarousel.Carousel();
+
+	var modal = new _libComponentsPkgModalModal.Modal();
+
+	/* Carousel */
+	var carousels = document.querySelectorAll('.carousel');
+	for (var i = 0, il = carousels.length; i < il; i++) {
+		new _libComponentsPkgCarouselCarousel.Carousel(carousels[i], i);
+	};
+
 	var tooltips = new _libComponentsPkgTooltipTooltip.Tooltips();
 };
 
 window.onload = init;
 
-/* example use of mobile nav */
+/* MobileNav */
 var menu = document.getElementsByClassName('page__nav');
 if (menu.length > 0) {
 	for (var m = 0; m < menu.length; m++) {
-		var nav = new _libComponentsPkgMobilenavMobilenav.MobileNav(menu[m]);
+		new _libComponentsPkgMobilenavMobilenav.MobileNav(menu[m], document.getElementsByClassName('page__nav-show'));
 	}
 }

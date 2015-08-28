@@ -21,7 +21,8 @@ gulp.task('styleguide:generate', function() {
         disableEncapsulation:false,
         server: true,
         extraHead: [
-            '<script src="/section/assets/js/styleguide.js"></script>'
+            '<script src="/section/assets/js/styleguide.js"></script>',
+            '<script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.4/hammer.min.js"></script>'
         ],
         rootPath: outputPath,
         overviewPath: 'docs/overview.md'

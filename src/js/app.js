@@ -2,7 +2,8 @@ import {Collapse} from '../../lib/components/pkg.collapse/collapse';
 import {MobileNav} from '../../lib/components/pkg.mobilenav/mobilenav';
 import {Ajax} from '../../lib/components/js.ajax/ajax';
 import {Tooltips} from '../../lib/components/pkg.tooltip/tooltip';
-import {Carousel,Carouselle} from '../../lib/components/pkg.carousel/carousel';
+import {Carousel} from '../../lib/components/pkg.carousel/carousel';
+import {Modal} from '../../lib/components/pkg.modal/modal';
 
 /*
 var $ = require('../../lib/components/jquery/dist/jquery.js');
@@ -25,16 +26,24 @@ window.data = {
 var init = function() {
 	var collapse = new Collapse('click');
 	var ajax = new Ajax();
-	var carousel = new Carousel();
+
+	var modal = new Modal();
+	
+	/* Carousel */
+	let carousels = document.querySelectorAll('.carousel');
+	for (var i =0, il = carousels.length; i <il; i++) {
+		new Carousel(carousels[i],i);
+	};
+
 	var tooltips = new Tooltips();
 }
 
 window.onload = init;
 
-/* example use of mobile nav */
+/* MobileNav */
 let menu = document.getElementsByClassName('page__nav');
 if (menu.length > 0){
 	for (let m = 0; m < menu.length; m++){
-		let nav = new MobileNav(menu[m], document.getElementsByClassName('page__nav-show'))
+		new MobileNav(menu[m], document.getElementsByClassName('page__nav-show'));
 	}
 }

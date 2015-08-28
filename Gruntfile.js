@@ -449,7 +449,7 @@ module.exports = function(grunt) {
 				src: 'src/favicon/favicon.png',
 				dest: 'public/assets/favicons',
 				icons_path: '/assets/favicons',
-				html: ['src/html/partials/head.html'],
+				html: ['src/html/partials/favicons.html'],
 				design: {
 					ios: {
 						//picture_aspect: 'background_and_margin',
